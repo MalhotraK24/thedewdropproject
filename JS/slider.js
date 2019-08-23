@@ -30,5 +30,5 @@ function showSlides(n) {
 }
 
 $(document).ready(function(){
-  autoSlides();
+  //autoSlides();
 });
