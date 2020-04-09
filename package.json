@@ -1,0 +1,26 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Website for The Dewdrop Project company",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MalhotraK24/thedewdropproject.git"
+  },
+  "author": "Kartik Malhotra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MalhotraK24/thedewdropproject/issues"
+  },
+  "homepage": "https://github.com/MalhotraK24/thedewdropproject#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "compass": "^0.1.1",
+    "contentful": "^7.14.2",
+    "less": "^3.11.1",
+    "sass": "^1.26.3"
+  }
+}
