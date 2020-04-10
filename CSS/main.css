@@ -34,8 +34,9 @@ h1{
     font-weight: normal;
     font-size: 55px;
     margin: 30px;
+    letter-spacing: 1px;
 }
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 600px){
     h1{
         font-size: 45px;
     }
@@ -46,8 +47,9 @@ h2{
     font-size: 35px;
     margin: 25px;
     margin: 30px;
+    letter-spacing: 2px;
 }
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 600px){
     h2{
         font-size: 30px;
     }
@@ -59,7 +61,7 @@ h3{
     margin: 20px;
     letter-spacing: 3px;
 }
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 600px){
     h3{
         font-size: 20px;
     }
@@ -71,7 +73,7 @@ header{
 	flex-direction: column;
 	justify-content: center;
 }
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 600px){
     header{
         justify-content: flex-start;
     }
@@ -81,36 +83,35 @@ header{
 	position: absolute;
 	background-color: whitesmoke;
 	width: 15%;
-	opacity: 0.8;
+    opacity: 0.8;
+    padding: 0px 50px;
 }
-@media only screen and (min-width: 700px) and (max-width: 900px){
+@media only screen and (min-width: 900px) and (max-width: 1100px){
     .header{
-        z-index: 1;
-        position: absolute;
-        background-color: whitesmoke;
-        width: 17%;
-        opacity: 0.8;
+        padding: 0px 40px;
     }
 }
-@media only screen and (max-width: 700px){
+@media only screen and (min-width: 600px) and (max-width: 900px){
     .header{
-        z-index: 1;
-        position: absolute;
-        background-color: whitesmoke;
+        padding: 0px 30px;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 600px){
+    .header{
+        width: 17%;
+        padding: 0px 20px;
+        margin-top: 40px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .header{
         width: 20%;
-        opacity: 0.8;
-        margin-top: 30px;
+        padding: 0px 20px;
+        margin-top: 40px;
     }
 }
 .header .logo img{
     width: 100%;
-	padding: 20px;
-}
-@media only screen and (max-width: 700px){
-    .header .logo img{
-        width: 100%;
-        padding: 10px;
-    }
 }
 
 /* Banner Image */
@@ -133,84 +134,133 @@ header{
     background-image: url(../Gallery/Banner3.jpg);
 }
 
+hr{
+    width: 80px;
+	margin-bottom: 40px;
+	align-self: center;
+}
+
+.gallery-title{
+    display: flex;
+	flex-flow: column;
+	text-align: center;
+}
+
+.visually-hidden {
+    display: none;
+}
+
 /* Section */
 section.intro{
     text-align: center;
     padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    background-color: gainsboro;
+    padding: 30px 90px 30px 90px;
 }
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    section.intro{
+        padding: 30px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    section.intro{
+        padding: 15px 30px 15px 30px;
+    }
+}
+
 section.intro h1{
-	font-family: 'tangerine';
+    font-family: inherit;
+    margin: 20px 0px;
 }
+
 section.intro p{
-    margin: 0 0 20px 0;
-	padding: 0 30px;
+    margin: 0 0 10px 0;
+	padding: 0 50px;
 	font-size: 16px;
 	color: #403f3f;
 	line-height: 1.5;
 	font-family: 'quicksand';
-	text-align: justify;
+	text-align: center;
 }
+@media only screen and (max-width: 900px) {
+    section.intro p{
+        font-size: 13px;
+    }
+}
+
+section.intro div.content{
+	display: flex;
+    flex-direction: column;
+    width: 50%;
+	padding: 45px 0px;
+	background-color: white;
+}
+@media only screen and (max-width: 600px) {
+    section.intro div.content{
+        width: 100%;
+    }
+}
+
+section.intro img{
+	object-fit: fill;
+	object-position: center;
+    width: 50%;
+}
+@media only screen and (max-width: 600px) {
+    section.intro img{
+        display: none;
+    }
+}
+
 section.galleries{
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: row;
-    padding: 30px 0;
-    background-color: lightgrey;
+    padding: 30px 90px 30px 90px;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 600px) and (max-width: 900px) {
     section.galleries{
-        flex-direction: column;
+        padding: 15px 30px 15px 30px;
     }
 }
-section.galleries .gallery{
-	background-color: whitesmoke;
-    margin-bottom: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-@media only screen and (min-width: 700px) {
-    section.galleries .gallery{
-        margin-right: 10px;
-        margin-left: 10px;
+@media only screen and (max-width: 600px) {
+    section.galleries{
+        padding: 20px;
+        flex-flow: wrap;
     }
 }
 
-section.galleries .gallery .images{
-    padding: 0 15px 15px 15px;
+section.galleries .gallery h3{
+    color: white;
 }
+
+section.galleries .gallery{
+	background-color: #505050;
+    margin: 0px 10px 40px 10px;
+    text-align: center;
+    width: 100%;
+}
+
 section.galleries .gallery .images img:hover{
     opacity: 0.8;
     cursor: crosshair;
 }
 
 section.galleries .gallery .images img{
-    width: 220px;
-    height: 200px;
-    max-width: 100%;
-}
-@media only screen and (min-width: 700px) and (max-width: 1024px){
-    section.galleries .gallery .images img{
-        width: 165px;
-        height: 150px;
-        max-width: 100%;
-    }
-}
-@media only screen and (max-width: 480px) {
-    section.galleries .gallery .images img{
-        width: 165px;
-        height: 150px;
-        max-width: 100%;
-    }
+    width: 100%;
+    height: 100%;
 }
 
 section.before-footer {
     display: flex;
     flex-direction: row;
-    background-color: #505050;
+    background-color: darkslategray;
     color: whitesmoke;
 }
+
 section.before-footer .menu {
     width: 40%;
 	padding: 20px;
@@ -220,6 +270,7 @@ section.before-footer .menu {
     justify-content: flex-start;
     border-right: 1px whitesmoke solid;
 }
+
 section.before-footer .menu a{
     font-family: 'ostrich-sans';
 	font-size: 19px;
@@ -230,7 +281,7 @@ section.before-footer .menu a{
     border-bottom: 1px whitesmoke dotted;
 	width: 30%;
 }
-@media only screen and (min-width: 540px) and (max-width: 700px){
+@media only screen and (min-width: 540px) and (max-width: 600px){
     section.before-footer .menu a{
         font-size: 16px;
         width: 40%;
@@ -255,15 +306,14 @@ section.before-footer .features {
     justify-content: center;
     padding: 20px 0;
 }
-.features h3{
-    border-bottom: 1px whitesmoke solid;
-}
+
 .features .logos{
     flex-direction: row;
     text-align: center;
     justify-content: space-evenly;
     padding-top: 10px;
 }
+
 .features .logos img{
     width: 80px;
 	height: auto;
@@ -272,9 +322,9 @@ section.before-footer .features {
     border: 1px whitesmoke solid;
 	border-radius: 50px;
 }
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 600px){
     .features .logos img{
-        width: 60px;
+        width: 55px;
     }
 }
 
@@ -286,18 +336,22 @@ footer{
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
 footer .social-media-icons{
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
 }
+
 footer .social-media-icons a{
     margin-right: 10px;
 }
+
 footer .social-media-icons img{
     height: 40px;
     width: 40px;
 }
+
 footer .social-media-icons img.email-icon{
     height: 30px;
     width: 30px;

@@ -780,7 +780,7 @@ $.fn.simpleLightbox = function( options )
 			e.preventDefault();
 			if(animating) return false;
 			var elem = $(this);
-			startIndex = objects.index(elem);
+			//startIndex = objects.index(elem);
 			openImage(elem);
 		}
 	});
