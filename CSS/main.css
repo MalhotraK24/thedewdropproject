@@ -158,16 +158,23 @@ section.intro{
     display: flex;
     flex-direction: row;
     background-color: gainsboro;
-    padding: 30px 90px 30px 90px;
+    padding: 30px 60px 30px 60px;
 }
-@media only screen and (min-width: 600px) and (max-width: 900px) {
+@media only screen and (min-width: 700px) and (max-width: 900px) {
     section.intro{
         padding: 30px;
     }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+    section.intro{
+        padding: 30px;
+        flex-direction: column-reverse;
+    }
+}
+@media only screen and (max-width: 500px) {
     section.intro{
         padding: 30px 0px;
+        flex-direction: column-reverse;
     }
 }
 
@@ -198,20 +205,20 @@ section.intro div.content{
 	padding: 45px 0px;
 	background-color: white;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     section.intro div.content{
         width: 100%;
     }
 }
 
 section.intro img{
-	object-fit: fill;
-	object-position: center;
+	object-fit: cover;
     width: 50%;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     section.intro img{
-        display: none;
+        margin-bottom: -40px;
+        align-self: center;
     }
 }
 
