@@ -139,7 +139,7 @@ body.hidden-scroll {
 
 .sl-spinner {
   display: none;
-  border: 5px solid #333;
+  border: 5px solid whitesmoke;
   border-radius: 40px;
   height: 40px;
   left: 50%;
