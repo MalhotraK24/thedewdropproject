@@ -115,7 +115,12 @@ header{
 }
 
 /* Banner Image */
-.banner-image-1, .banner-image-2, .banner-image-3{
+.banner-image-1, 
+.banner-image-2, 
+.banner-image-3, 
+.banner-image-jasmine, 
+.banner-image-ridhima, 
+.banner-image-rohan{
 	min-height: 730px;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -123,15 +128,27 @@ header{
 }
 
 .banner-image-1{
-    background-image: url(../Gallery/Banner1.jpg);
+    background-image: url(../Gallery/Banners/Banner1.jpg);
 }
 
 .banner-image-2{
-    background-image: url(../Gallery/Banner2.jpg);
+    background-image: url(../Gallery/Banners/Banner2.jpg);
 }
 
 .banner-image-3{
-    background-image: url(../Gallery/Banner3.jpg);
+    background-image: url(../Gallery/Banners/Banner3.jpg);
+}
+
+.banner-image-jasmine{
+    background-image: url(../Gallery/Banners/jasmine-getting-ready.jpg);
+}
+
+.banner-image-ridhima{
+    background-image: url(../Gallery/Banners/ridhima-getting-ready.jpg);
+}
+
+.banner-image-rohan{
+    background-image: url(../Gallery/Banners/rohan-cocktail.jpg);
 }
 
 hr{
@@ -212,13 +229,15 @@ section.intro div.content{
 }
 
 section.intro img{
-	object-fit: fill;
+	object-fit: cover;
     width: 50%;
+    max-height: 550px;
 }
 @media only screen and (max-width: 700px) {
     section.intro img{
         margin-bottom: -40px;
         align-self: center;
+        height: 220px;
     }
 }
 
