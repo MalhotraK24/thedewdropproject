@@ -8,7 +8,7 @@ body.hidden-scroll {
   top: 0;
   bottom: 0;
   background: #000;
-  opacity: 0.9;
+  opacity: 1;
   display: none;
   z-index: 1035; }
 
@@ -34,7 +34,7 @@ body.hidden-scroll {
     width: 44px;
     line-height: 44px;
     font-family: Arial, Baskerville, monospace;
-    color: #000;
+    color: whitesmoke;
     font-size: 3rem; }
     .sl-wrapper .sl-close:focus {
       outline: none; }
@@ -60,7 +60,7 @@ body.hidden-scroll {
       display: block;
       z-index: 10060;
       font-family: Arial, Baskerville, monospace;
-      color: #000; }
+      color: whitesmoke; }
       .sl-wrapper .sl-navigation button.sl-next {
         right: 5px;
         font-size: 2rem; }
