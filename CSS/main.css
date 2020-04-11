@@ -311,7 +311,7 @@ section.before-footer .features {
     flex-direction: row;
     text-align: center;
     justify-content: space-evenly;
-    padding-top: 10px;
+    padding: 10px 0px;
 }
 
 .features .logos img{
