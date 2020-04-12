@@ -10,7 +10,7 @@ $(document).ready(function(){
     autoSlides();
 
     // Display success message on form submission
-    $("#my-form").submit(function(e) {
+    $('form[name="contact"]').submit(function(e) {
         e.preventDefault();
         //showAlert();
         var $form = $(this);
