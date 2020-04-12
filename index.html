@@ -37,15 +37,6 @@
                 </div>
             </div>
             <div class="slideshow-container" class="visually-hidden">
-                <!-- <div class="mySlides fade">
-                   <div class="banner-image-1"></div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="banner-image-2"></div>
-                </div>
-                <div class="mySlides fade">
-                    <div class="banner-image-3"></div>
-                </div> -->
                 <div class="mySlides fade">
                     <div class="banner-image-ridhima"></div>
                 </div>
@@ -57,7 +48,7 @@
                 </div>
             </div>
         </header>
-        <section class="intro">
+        <!-- <section class="intro">
             <div class="content">
                 <h1>About us</h1>
                 <hr/>
@@ -66,7 +57,7 @@
                 <p>We are a team of dedicated professionals who believe weddings are special in one's life and our team ensures that by capturing the mood of every event.</p>
             </div>
             <img src="./Gallery/about-us.jpg" alt="About us image">
-        </section>
+        </section> -->
         <div class="gallery-title">
             <h1>Portfolio</h2>
             <hr/>
@@ -108,8 +99,8 @@
                 <a href="./Gallery/Disha-Sanchit/Disha-Sanchit-5.jpg" class="gallery__item--5">
                     <img src="./Gallery/Disha-Sanchit/Disha-Sanchit-5.jpg" alt="">
                 </a>
-                <a href="./Gallery/Disha-Sanchit/Wedding - 1.jpg" class="gallery__item--6">
-                    <img src="./Gallery/Disha-Sanchit/Wedding - 1.jpg" alt="">
+                <a href="./Gallery/Banners/Banner3.jpg" class="gallery__item--6">
+                    <img src="./Gallery/Banners/Banner3.jpg" alt="">
                 </a>
             </div>
             <div class="gallery">
@@ -131,6 +122,55 @@
                 <a href="./Gallery/Disha-Sanchit/Disha-Sanchit-6.jpg" class="gallery__item--6">
                     <img src="./Gallery/Disha-Sanchit/Disha-Sanchit-6.jpg" alt="">
                 </a>
+            </div>
+        </section>
+        <div class="container">
+            <div class="banner-image-3 section-separation-image"></div>
+            <div class="header-content image-content">
+                <p class="subtitle">"Capturing the moments of today to wow your heart tomorrow"</p>
+            </div>
+        </div>
+        <section class="contact-us">
+            <div class="contact-us-form">
+                <div class="contact-us-title">
+                    <h1>Let's talk</h2>
+                    <hr/>
+                </div>
+                <form name="contact" method="POST" data-netlify="true">
+                <div class="input-field">
+                    <label>Name</label>
+                    <input type="text" name="name" placeholder value required/>
+                </div>
+                <div class="input-field">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder value max-length="80" required/>
+                </div>
+                <div class="input-field">
+                    <label>Phone</label>
+                    <input type="tel" name="phone" placeholder value max-length="15" required/>
+                </div>
+                <div class="input-field dropdown">
+                    <label>What service are you looking for today?</label>
+                    <select name="services offered" placeholder value required>
+                        <option value="default" selected></option>
+                        <option value="wedding">Wedding Photography</option>
+                        <option value="prewedding">Prewedding Photography</option>
+                        <option value="kids shoot">Kids & Maternity Shoot</option>
+                        <option value="maternity shoot">Corporate Shoot</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label class="textarea-label">Please provide details about the shoot</label>
+                    <p class="caption">(Events, No. of people, Location etc.)</p>
+                    <textarea name="message"></textarea>
+                </div>
+                <div class="input-field">
+                    <button type="submit" disabled>Send</button>
+                </div>
+            </form>
+            </div>
+            <div class="contact-us-image">
+                <img src="./Gallery/lets-talk.jpg" alt="">
             </div>
         </section>
         <section class="before-footer">
