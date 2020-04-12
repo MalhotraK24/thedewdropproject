@@ -136,7 +136,7 @@
                     <h1>Let's talk</h2>
                     <hr/>
                 </div>
-                <form name="contact" method="POST" data-netlify="true">
+                <form id="my-form" name="contact" method="POST" data-netlify="true">
                 <div class="input-field">
                     <label>Name</label>
                     <input type="text" name="name" placeholder value required/>
@@ -151,7 +151,7 @@
                 </div>
                 <div class="input-field dropdown">
                     <label>What service are you looking for today?</label>
-                    <select name="services offered" placeholder value required>
+                    <select name="role" placeholder value required>
                         <option value="default" selected></option>
                         <option value="wedding">Wedding Photography</option>
                         <option value="prewedding">Prewedding Photography</option>
@@ -165,7 +165,7 @@
                     <textarea name="message"></textarea>
                 </div>
                 <div class="input-field">
-                    <button type="submit" disabled>Send</button>
+                    <button type="submit">Send</button>
                 </div>
             </form>
             </div>
