@@ -18,9 +18,16 @@
          font-weight: normal;
 }
 
+@font-face {
+    font-family: 'Gotu';
+    src: url('../Fonts/Gotu/Gotu-Regular.ttf') format('truetype');
+         font-style: normal;
+         font-weight: normal;
+}
+
 /* Body */
 body{
-    font-family: 'ostrich-sans','FS Joey Web Light','FS Joey Web Regular',sans-serif;
+    font-family: 'ostrich-sans', 'Gotu', 'FS Joey Web Light','FS Joey Web Regular',sans-serif;
 }
 
 /* Anchor */
@@ -205,7 +212,7 @@ header .container{
 .header-content .subtitle{
     margin: 0px;
     font-size: 45px;
-    font-family: fantasy, sans-serif, cursive;
+    font-family: 'Gotu';
     font-weight: lighter;
     letter-spacing: 2px;
 }
@@ -223,7 +230,7 @@ header .container{
 .header-content .caption{
     margin: 10px 0px;
     font-size: 25px;
-    font-family: fantasy, sans-serif, cursive;
+    font-family: 'Gotu';
     font-weight: lighter;
 	letter-spacing: 1px;
 }
