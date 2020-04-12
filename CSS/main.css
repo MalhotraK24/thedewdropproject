@@ -183,7 +183,7 @@ header .container{
 }
 @media only screen and (max-width: 500px) {
     .header-content{
-        padding: 175px 40px;
+        padding: 100px 40px;
     }
 }
 
