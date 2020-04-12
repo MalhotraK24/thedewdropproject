@@ -465,6 +465,7 @@ section.contact-us{
 
 .contact-us-form{
     width: 50%;
+    padding: 0px 40px 40px 40px;
 }
 @media only screen and (max-width: 800px) {
     .contact-us-form{
@@ -476,7 +477,6 @@ section.contact-us{
 form{
     display: flex;
 	flex-direction: column;
-    padding: 0px 40px 40px 40px;
 }
 
 form div.input-field{
@@ -743,3 +743,88 @@ footer .copyright{
     padding-top: 15px;
     text-align: center
 }
+
+/* ALERT RELATED CLASS (START) */
+
+.alert-area {
+    max-height: 100%;
+    position: relative;
+    bottom: 5px;
+    left: 20px;
+    right: 20px;
+    width: 100%;
+    margin: 10px 0px;
+  }
+  @media only screen and (max-width: 800px){
+    .alert-area{
+        width: 70%;
+    }
+  }
+  
+  .alert-box {
+    color: white;
+    background: rgba(0, 0, 0, 0.9);
+    line-height: 1.3em;
+    padding: 10px 15px;
+    margin: 5px 10px;
+    position: relative;
+    border-radius: 5px;
+    transition: opacity 0.5s ease-in;
+    font-family: 'Guto';
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .alert-box.hide {
+    opacity: 0;
+  }
+  
+  .alert-close {
+    background: transparent;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .alert-close:before,
+  .alert-close:after {
+    content: '';
+    width: 15px;
+    border-top: solid 2px white;
+    position: absolute;
+    top: 5px;
+    right: -1px;
+    display: block;
+  }
+  
+  .alert-close:before {
+    transform: rotate(45deg);
+  }
+  
+  .alert-close:after {
+    transform: rotate(135deg);
+  }
+  
+  .alert-close:hover:before,
+  .alert-close:hover:after {
+    border-top: solid 2px #d8d8d8;
+  }
+  
+  @media (max-width: 767px) and (min-width: 481px) {
+    .alert-area {
+      left: 100px;
+      right: 100px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .alert-area {
+      width: 350px;
+      left: auto;
+      right: 0;
+    }
+  }
+  
+  /* ALERT RELATED CLASS (END) */
