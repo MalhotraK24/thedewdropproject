@@ -12,7 +12,7 @@ $(document).ready(function(){
     // Display success message on form submission
     $('form[name="contact"]').submit(function(e) {
         e.preventDefault();
-        //showAlert();
+        
         var $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
           showAlert();

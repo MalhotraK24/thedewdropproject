@@ -749,11 +749,8 @@ footer .copyright{
 .alert-area {
     max-height: 100%;
     position: relative;
-    bottom: 5px;
-    left: 20px;
-    right: 20px;
     width: 100%;
-    margin: 10px 0px;
+    margin: 20px 0px;
   }
   @media only screen and (max-width: 800px){
     .alert-area{
