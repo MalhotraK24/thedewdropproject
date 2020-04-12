@@ -507,7 +507,8 @@ form input{
     font-family: 'Gotu';
 	font-size: 13px;
 	-webkit-appearance: none;
-	-moz-appearance: none;
+    -moz-appearance: none;
+    border-radius: 5px;
 	border-width: 1px;
 	background-color: transparent;
 	box-sizing: border-box !important;
@@ -526,9 +527,9 @@ form input{
 form select{
     font-family: 'Gotu';
 	font-size: 13px;
-    border-radius: 0;
 	-webkit-appearance: none;
-	-moz-appearance: none;
+    -moz-appearance: none;
+    border-radius: 5px;
 	background-color: rgba(255, 255, 255, 1);
 	color: #000000;
 	border-width: 1px;
@@ -572,7 +573,9 @@ form select{
 form textarea{
     min-height: 150px;
     padding: 10px;
-    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 5px;
 	font: 'Gotu';
 	border-width: 1px;
 	resize: none;
