@@ -200,7 +200,7 @@ header .container{
 .header-content .subtitle{
     margin: 0px;
     font-size: 45px;
-    font-family: fantasy;
+    font-family: fantasy, sans-serif, cursive;
     font-weight: lighter;
     letter-spacing: 2px;
 }
@@ -218,7 +218,7 @@ header .container{
 .header-content .caption{
     margin: 10px 0px;
     font-size: 25px;
-    font-family: cursive;
+    font-family: fantasy, sans-serif, cursive;
     font-weight: lighter;
 	letter-spacing: 1px;
 }
