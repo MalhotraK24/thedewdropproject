@@ -13,6 +13,9 @@ $(document).ready(function(){
     $('form[name="contact-us"]').submit(function(e) {
         e.preventDefault();
         
+        var nameFieldValue = $('input[name="name"]').val();
+        $('input[name="subject"]').val("New quote request from : " + nameFieldValue);
+        
         var $form = $(this);
         $.post($form.attr("action"), $form.serialize()).then(function() {
           showAlert();
