@@ -12,12 +12,12 @@ $(document).ready(function(){
     // Display success message on form submission
     $("#my-form").submit(function(e) {
         e.preventDefault();
-        showAlert();
-        //var $form = $(this);
-        // $.post($form.attr("action"), $form.serialize()).then(function() {
-        //   $('.success-message').show();
-        // });
-        //$form[0].reset();
+        //showAlert();
+        var $form = $(this);
+        $.post($form.attr("action"), $form.serialize()).then(function() {
+          showAlert();
+        });
+        $form[0].reset();
         return false;
       });
 });
