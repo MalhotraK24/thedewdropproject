@@ -190,7 +190,7 @@ header .container{
 }
 @media only screen and (max-width: 500px) {
     .header-content{
-        padding: 100px 40px;
+        padding: 150px 40px;
     }
 }
 
@@ -200,18 +200,18 @@ header .container{
 }
 @media only screen and (min-width: 500px) and (max-width: 700px) {
     .header-content .title{
-        font-size: 75px;
+        font-size: 70px;
     }
 }
 @media only screen and (max-width: 500px) {
     .header-content .title{
-        font-size: 65px;
+        font-size: 60px;
     }
 }
 
 .header-content .subtitle{
     margin: 0px;
-    font-size: 45px;
+    font-size: 40px;
     font-family: 'Gotu';
     font-weight: lighter;
     letter-spacing: 2px;
@@ -229,14 +229,14 @@ header .container{
 
 .header-content .caption{
     margin: 10px 0px;
-    font-size: 25px;
+    font-size: 22px;
     font-family: 'Gotu';
     font-weight: lighter;
 	letter-spacing: 1px;
 }
 @media only screen and (min-width: 500px) and (max-width: 700px) {
     .header-content .caption{
-        font-size: 18px;
+        font-size: 17px;
     }
 }
 @media only screen and (max-width: 500px) {
