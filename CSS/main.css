@@ -67,6 +67,10 @@ h3{
     }
 }
 
+p{
+    margin: 10px 0px;
+}
+
 /* Header */
 header{
     display: flex;
@@ -94,13 +98,6 @@ header{
 @media only screen and (min-width: 600px) and (max-width: 900px){
     .header{
         padding: 0px 30px;
-    }
-}
-@media only screen and (min-width: 600px) and (max-width: 600px){
-    .header{
-        width: 17%;
-        padding: 0px 20px;
-        margin-top: 40px;
     }
 }
 @media only screen and (max-width: 600px){
@@ -154,7 +151,7 @@ header{
 hr{
     width: 80px;
 	margin-bottom: 40px;
-	align-self: center;
+    align-self: center;
 }
 
 .gallery-title{
@@ -168,6 +165,74 @@ hr{
     display: none;
 }
 
+/* Header */
+header .container{
+    display: flex;
+	flex-direction: column;
+}
+
+.header-content{
+    position: absolute;
+	color: whitesmoke;
+	align-self: center;
+	padding: 225px 40px;
+	text-align: center;
+	display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.header-content .title{
+    font-size: 85px;
+    letter-spacing: 2px;
+}
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+    .header-content .title{
+        font-size: 70px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .header-content .title{
+        font-size: 60px;
+    }
+}
+
+.header-content .subtitle{
+    margin: 0px;
+    font-size: 45px;
+    font-family: fantasy;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+    .header-content .subtitle{
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .header-content .subtitle{
+        font-size: 30px;
+    }
+}
+
+.header-content .caption{
+    margin: 10px 0px;
+    font-size: 25px;
+    font-family: cursive;
+    font-weight: lighter;
+	letter-spacing: 1px;
+}
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+    .header-content .caption{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .header-content .caption{
+        font-size: 15px;
+    }
+}
+
 /* Section */
 section.intro{
     text-align: center;
@@ -175,11 +240,11 @@ section.intro{
     display: flex;
     flex-direction: row;
     background-color: gainsboro;
-    padding: 30px 60px 30px 60px;
+    padding: 60px;
 }
 @media only screen and (min-width: 700px) and (max-width: 900px) {
     section.intro{
-        padding: 30px;
+        padding: 40px;
     }
 }
 @media only screen and (min-width: 500px) and (max-width: 700px) {
@@ -203,7 +268,7 @@ section.intro h1{
 section.intro p{
     margin: 0 0 10px 0;
 	padding: 0 50px;
-	font-size: 16px;
+	font-size: 15px;
 	color: #403f3f;
 	line-height: 1.5;
 	font-family: 'quicksand';
@@ -283,16 +348,16 @@ section.galleries .gallery .images img{
 
 /* Gallery Grid */
 section.grid{
-    padding: 0px 1px 40px 1px;
-	margin: 0px 0px 20px 0px;
+    padding: 0px 8px 80px 8px;
+	margin: 0px 0px 40px 0px;
 }
 
 .grid .gallery{
     display: grid;
 	grid-template-columns: repeat(16, 1fr);
 	grid-template-rows: repeat(11, 5vw);
-    grid-gap: 1px;
-    margin-top: 1px;
+    grid-gap: 8px;
+    margin-top: 8px;
 }
 
 .grid img{
