@@ -44,7 +44,7 @@ var AlertBox = function(id, option) {
 
 var alertNoClose = new AlertBox('#alert-area', {
   closeTime: 5000,
-  persistent: true,
+  persistent: false,
   hideCloseButton: true
 });
 
