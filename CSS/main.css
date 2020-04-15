@@ -58,7 +58,7 @@ h2{
 }
 @media only screen and (max-width: 600px){
     h2{
-        font-size: 30px;
+        font-size: 25px;
     }
 }
 h3{
@@ -691,25 +691,26 @@ section.before-footer .features {
     text-align: center;
     justify-content: space-evenly;
     padding: 10px 0px;
-    max-width: 60%;
+    max-width: 90%;
+    margin-right: 10px;
 }
 @media only screen and (max-width: 500px){
     .features .logos {
-        max-width: 80%;
+        max-width: 100%;
     }
 }
 
 .features .logos img{
-    width: 90px;
+    width: 75px;
 	height: auto;
-	margin-left: 15px;
-    margin-bottom: 15px;
+	margin-left: 10px;
+    margin-bottom: 10px;
     border: 1px whitesmoke solid;
 	border-radius: 50px;
 }
 @media only screen and (max-width: 600px){
     .features .logos img{
-        width: 75px;
+        width: 60px;
     }
 }
 
