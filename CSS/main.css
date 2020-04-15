@@ -597,13 +597,13 @@ form p.caption{
     margin: 0px 0px 10px 0px;
 	font-family: 'Gotu';
 	font-size: 10px;
-	opacity: 0.5;
+	opacity: 0.7;
 }
 
 form button{
     padding: 12px 50px;
     color: white;
-    background-color: rgba(207, 121, 39);
+    background-color: rgb(152, 117, 74);
 	border: solid rgba(255, 255, 255, 1) 1px;
 	cursor: pointer !important;
 	text-align: center;
