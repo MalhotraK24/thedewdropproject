@@ -14,15 +14,17 @@
          url('../Fonts/ostrich-sans/OstrichSans-Medium.otf') format('otf'),
          url('../Fonts/ostrich-sans/OstrichSansRounded-Medium.otf') format('otf'),
          url('../Fonts/ostrich-sans/ostrich-regular.ttf') format('truetype');
-         font-style: normal;
-         font-weight: normal;
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap
 }
 
 @font-face {
     font-family: 'Gotu';
     src: url('../Fonts/Gotu/Gotu-Regular.ttf') format('truetype');
-         font-style: normal;
-         font-weight: normal;
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap
 }
 
 /* Body */
