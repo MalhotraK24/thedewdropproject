@@ -22,6 +22,8 @@
     "contentful": "^7.14.2",
     "gulp": "^4.0.2",
     "imagemin": "^7.0.1",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-optipng": "^7.1.0",
     "imagemin-webp": "^5.1.0",
     "jquery": "^3.5.0",
     "less": "^3.11.1",
