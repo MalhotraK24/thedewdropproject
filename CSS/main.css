@@ -571,7 +571,8 @@ form textarea{
     -webkit-appearance: none;
     -moz-appearance: none;
     border-radius: 5px;
-	font: 'Gotu';
+    font-family: 'Gotu';
+	font-size: 13px;
 	border-width: 1px;
 	resize: none;
 	background-color: rgba(255, 255, 255, 1);
