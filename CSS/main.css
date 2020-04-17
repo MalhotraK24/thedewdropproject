@@ -603,7 +603,7 @@ form p.caption{
 form button{
     padding: 12px 50px;
     color: white;
-    background-color: rgb(152, 117, 74);
+    background-color: rgb(46, 79, 79);
 	border: solid rgba(255, 255, 255, 1) 1px;
 	cursor: pointer !important;
 	text-align: center;
