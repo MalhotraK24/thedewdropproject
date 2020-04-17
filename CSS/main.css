@@ -570,10 +570,11 @@ form textarea{
     padding: 10px;
     -webkit-appearance: none;
     -moz-appearance: none;
-    border-radius: 5px;
     font-family: 'Gotu';
 	font-size: 13px;
-	border-width: 1px;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: rgba(145, 145, 145, 1);
 	resize: none;
 	background-color: rgba(255, 255, 255, 1);
 	box-sizing: border-box !important;
