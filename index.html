@@ -139,31 +139,36 @@
                 </div>
                 <form name="contact-us" method="POST" data-netlify="true">
                     <div class="input-field">
-                        <label>Name</label>
-                        <input type="text" name="name" placeholder value required/>
+                        <label>Name
+                            <input type="text" name="name" placeholder value required/>
+                        </label>
                     </div>
                     <div class="input-field">
-                        <label>Email</label>
-                        <input type="email" name="email" placeholder value max-length="80" required/>
+                        <label>Email
+                            <input type="email" name="email" placeholder value max-length="80" required/>
+                        </label>
                     </div>
                     <div class="input-field">
-                        <label>Phone</label>
-                        <input type="tel" name="phone" placeholder value max-length="15" required/>
+                        <label>Phone
+                            <input type="tel" name="phone" placeholder value max-length="15" required/>
+                        </label>
                     </div>
                     <div class="input-field dropdown">
-                        <label>What service are you looking for today?</label>
-                        <select name="services" placeholder value required>
-                            <option value="default" selected></option>
-                            <option value="Wedding Photography">Wedding Photography</option>
-                            <option value="Prewedding Photography">Prewedding Photography</option>
-                            <option value="Kids and Maternity Shoot">Kids & Maternity Shoot</option>
-                            <option value="Corporate Shoot">Corporate Shoot</option>
-                        </select>
+                        <label>What service are you looking for today?
+                            <select name="services" placeholder value required>
+                                <option value="default" selected></option>
+                                <option value="Wedding Photography">Wedding Photography</option>
+                                <option value="Prewedding Photography">Prewedding Photography</option>
+                                <option value="Kids and Maternity Shoot">Kids & Maternity Shoot</option>
+                                <option value="Corporate Shoot">Corporate Shoot</option>
+                            </select>
+                        </label>
                     </div>
                     <div class="input-field">
-                        <label class="textarea-label">Please provide details about the shoot</label>
-                        <p class="caption">(Events, No. of people, Location etc.)</p>
-                        <textarea name="information"></textarea>
+                        <label class="textarea-label">Please provide details about the shoot
+                            <p class="caption">(Events, No. of people, Location etc.)</p>
+                            <textarea name="information"></textarea>
+                        </label>
                     </div>
                     <div class="input-field">
                         <button type="submit">Send</button>

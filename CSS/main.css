@@ -486,7 +486,7 @@ form{
 }
 
 form div.input-field{
-    margin: 15px 0px;
+    margin: 10px 0px;
 	flex-direction: column;
 	display: flex;
 	text-align: left;
@@ -495,12 +495,7 @@ form div.input-field{
 form label{
     font-size: 15px;
 	font-family: 'Gotu';
-	margin-bottom: 8px;
 	opacity: 0.7;
-}
-
-form .textarea-label{
-	margin-bottom: 0px;
 }
 
 form input{
@@ -516,7 +511,7 @@ form input{
 	border-style: solid;
 	border-color: rgba(145, 145, 145, 1);
 	padding: 3px;
-	margin: 0;
+	margin: 10px 0px;
 	max-width: 100%;
     text-overflow: ellipsis;
     padding: 10px;
@@ -535,7 +530,7 @@ form select{
 	border-width: 1px;
 	border-style: solid;
 	border-color: rgba(145, 145, 145, 1);
-	margin: 0;
+	margin: 10px 0px;
 	padding: 0 45px;
 	cursor: pointer;
 	position: relative;
@@ -584,7 +579,7 @@ form textarea{
 	color: #000000;
 	border-style: solid;
 	border-color: rgba(145, 145, 145, 1);
-	margin: 0;
+	margin: 10px 0px;
 	padding-top: 0.75em;
 	max-width: 100%;
 	min-width: 100%;
