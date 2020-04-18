@@ -563,7 +563,8 @@ form select{
 }
 @media only screen and (max-width: 500px){
     .dropdown::after{
-        top: 75%;
+        top: 62%;
+        left: 62%;
     }
 }
 
