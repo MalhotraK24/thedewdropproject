@@ -6,31 +6,31 @@ const imageminJpegtran = require('imagemin-jpegtran');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminPngquant = require('imagemin-pngquant');
 
-const PNGImages = 'Images/Icons/favicon_io/*.png';
-const JPEGImages = 'Images/Icons/*.{jpg,jpeg}';
-const output = 'Gallery/Icons/favicon_io';
-
-// exports.default = () =>
-//  imagemin([JPEGImages], {
-// 	destination: output,
-//     plugins: [ imageminMozjpeg({
-// 		quality: 70,
-// 		progressive: true,
-//       }),
-//     ]
-//   })
-//   .then(console.log("Compression successful!"))
-//   .catch(error => console.log(error));
+const PNGImages = 'Images/Icons/*.png';
+const JPEGImages = 'Images/*.{jpg,jpeg}';
+const output = 'Gallery';
 
 exports.default = () =>
- imagemin([PNGImages], {
-  destination: output,
-  plugins: [
-	imageminPngquant({ quality: [0.65, 0.80] })
-  ],
-})
-.then(console.log("Compression successful!"))
-.catch(error => console.log(error));
+ imagemin([JPEGImages], {
+	destination: output,
+    plugins: [ imageminMozjpeg({
+		quality: 50,
+		progressive: true,
+      }),
+    ]
+  })
+  .then(console.log("Compression successful!"))
+  .catch(error => console.log(error));
+
+// exports.default = () =>
+//  imagemin([PNGImages], {
+//   destination: output,
+//   plugins: [
+// 	imageminPngquant({ quality: [0.3, 0.5] })
+//   ],
+// })
+// .then(console.log("Compression successful!"))
+// .catch(error => console.log(error));
 
 // Old method to compress images
 // exports.default = () => (
