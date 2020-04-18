@@ -3,9 +3,37 @@ const imagemin = require('imagemin');
 const imageminWebp = require('imagemin-webp');
 const imageminOptipng = require('imagemin-optipng');
 const imageminJpegtran = require('imagemin-jpegtran');
+const imageminMozjpeg = require('imagemin-mozjpeg');
+const imageminPngquant = require('imagemin-pngquant');
+
+const PNGImages = 'Images/Icons/*.png';
+const JPEGImages = 'Images/*.{jpg,jpeg}';
+const output = 'Gallery';
+
+exports.default = () =>
+ imagemin([JPEGImages], {
+	destination: output,
+    plugins: [ imageminMozjpeg({
+		quality: 50,
+		progressive: true,
+      }),
+    ]
+  })
+  .then(console.log("Compression successful!"))
+  .catch(error => console.log(error));
+
+// exports.default = () =>
+//  imagemin([PNGImages], {
+//   destination: output,
+//   plugins: [
+// 	imageminPngquant({ quality: [0.3, 0.5] })
+//   ],
+// })
+// .then(console.log("Compression successful!"))
+// .catch(error => console.log(error));
 
 // Old method to compress images
-//	exports.default = () => (
+// exports.default = () => (
 // 	gulp.src('./Old Gallery/*.{jpg,png}')
 // 		.pipe(imagemin(['./Old Gallery/*.{jpg,png}'], './Gallery', {
 // 			use: [
@@ -18,7 +46,7 @@ const imageminJpegtran = require('imagemin-jpegtran');
 // Method to compress jgp or jpeg images
 // exports.default = async() => {
 // 	const files = await imagemin(
-// 		['Images/Pratishtha/*.{jpg,jpeg}'],
+// 		['Images/Pratishtha/*.jpg'],
 // 		{
 // 		  destination: 'Gallery/Pratishtha',
 // 		  plugins: [imageminJpegtran()]
@@ -28,13 +56,13 @@ const imageminJpegtran = require('imagemin-jpegtran');
 //   };
 
 // Method to compress png images
-exports.default = async() => {
-	const files = await imagemin(
-		['Images/Icons/favicon_io/*.png'],
-		{
-		  destination: 'Gallery/Icons/favicon_io',
-		  plugins: [imageminOptipng()]
-		}
-	);
-	console.log(files);
-  };
+// exports.default = async() => {
+// 	const files = await imagemin(
+// 		['Images/Icons/favicon_io/*.png'],
+// 		{
+// 		  destination: 'Gallery/Icons/favicon_io',
+// 		  plugins: [imageminOptipng()]
+// 		}
+// 	);
+// 	console.log(files);
+//   };

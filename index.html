@@ -13,14 +13,19 @@
         <link rel="icon" type="image/x-icon" href="./Gallery/Icons/favicon_io/favicon.ico">
         <link rel="apple-touch-icon" sizes="192x192" href="./Gallery/Icons/favicon_io/apple-touch-icon.png">
         <!-- CSS references -->
-        <link rel="stylesheet" type="text/css" href="./CSS/main.css" media="all">
+        <link rel="stylesheet" type="text/css" href="./CSS/main.min.css" media="all">
         <link rel="stylesheet" type="text/css" href="./CSS/Plugins/slider.min.css" media="all">
         <link rel="stylesheet" type="text/css" href="./CSS/Plugins/simplelightbox.min.css" media="all">
         <!-- Font references -->
-        <link href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap" rel="stylesheet" async>
-        <link href="https://fonts.googleapis.com/css?family=Gotu&amp;display=swap" rel="stylesheet" async>
+        <link rel="prefetch" href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap" rel="stylesheet" async>
+        <link rel="prefetch" href="https://fonts.googleapis.com/css?family=Gotu&amp;display=swap" rel="stylesheet" async>
         <!-- jQuery 3.5.0 reference -->
         <script src="https://code.jquery.com/jquery-3.5.0.min.js"  crossorigin="anonymous"></script>
+        <!-- JS references for slider, lightbox and main -->
+        <script src="./JS/Plugins/slider.min.js" type="text/javascript" async></script>
+        <script src="./JS/Plugins/simple-lightbox.min.js" type="text/javascript" async></script>
+        <script src="./JS/Plugins/alert.min.js" type="text/javascript" async></script>
+        <script src="./JS/main.min.js" type="text/javascript" async></script>
     </head>
     <body>
         <header>
@@ -30,7 +35,6 @@
                 </div>
             </div>
             <div class="container">
-	            <div class="banner-image-ridhima default"></div>
                 <div class="header-content">
                     <h1 class="title">The Dewdrop Project</h1><hr>
 	                <p class="subtitle">Wedding Photographers</p>
@@ -204,13 +208,13 @@
         </section>
         <footer>
             <div class="social-media-icons">
-                <a href="https://www.facebook.com/thedewdropproject/">
+                <a href="https://www.facebook.com/thedewdropproject/" target="_blank" rel="noreferrer">
                     <img class="facebook-icon" src="./Gallery/Icons/facebook.png" alt="facebook icon">
                 </a>
-                <a href="https://www.instagram.com/thedewdropproject/">
+                <a href="https://www.instagram.com/thedewdropproject/" target="_blank" rel="noreferrer">
                     <img class="insta-icon" src="./Gallery/Icons/instagram.png" alt="instagram icon">
                 </a>
-                <a href="mailto:thedewdropproject@gmail.com">
+                <a href="mailto:thedewdropproject@gmail.com" target="_blank" rel="noreferrer">
                     <img class="email-icon" src="./Gallery/Icons/email.png" alt="email icon">
                 </a>
             </div>
@@ -218,10 +222,5 @@
                 &copy; 2020. All rights reserved.
             </div>
         </footer>
-        <!-- JS references for slider, lightbox and main -->
-        <script src="./JS/Plugins/slider.js" type="text/javascript"></script>
-        <script src="./JS/Plugins/simple-lightbox.min.js" type="text/javascript"></script>
-        <script src="./JS/Plugins/alert.js" type="text/javascript"></script>
-        <script src="./JS/main.js" type="text/javascript"></script>
     </body>
 </html>
