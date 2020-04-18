@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(window).on('load', function(){
     
     // Call the lightbox pluglin 
     $('.gallery a').simpleLightbox();
