@@ -5,9 +5,7 @@ $(window).on('load', function(){
   
   // Call the lightbox pluglin
   $('.gallery a').simpleLightbox();
-});
 
-$(document).ready(function(){
   // Display success message on form submission
   $('form[name="contact-us"]').submit(function(e) {
     e.preventDefault();
