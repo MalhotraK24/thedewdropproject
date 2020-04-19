@@ -1,6 +1,6 @@
 {
-    "short_name": "The Dewdrop Project",
-    "name": "The Dewdrop Project - Wedding Photographers",
+    "short_name": "TDP",
+    "name": "The Dewdrop Project",
     "description": "Weather forecast information",
     "icons": [
       {
@@ -15,8 +15,8 @@
       }
     ],
     "start_url": "/?source=pwa",
-    "background_color": "#3367D6",
+    "background_color": "#FFF",
     "display": "standalone",
     "scope": "/",
-    "theme_color": "#3367D6"
+    "theme_color": "#FFF"
   }
