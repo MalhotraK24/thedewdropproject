@@ -1,0 +1,22 @@
+{
+    "short_name": "The Dewdrop Project",
+    "name": "The Dewdrop Project - Wedding Photographers",
+    "description": "Weather forecast information",
+    "icons": [
+      {
+        "src": "/Images/Icons/favicon_io/android-chrome-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/Images/Icons/favicon_io/android-chrome-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/?source=pwa",
+    "background_color": "#3367D6",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#3367D6"
+  }
