@@ -26,6 +26,20 @@
         <script src="./JS/Plugins/simple-lightbox.min.js" type="text/javascript" async></script>
         <script src="./JS/Plugins/alert.min.js" type="text/javascript" async></script>
         <script src="./JS/main.min.js" type="text/javascript" async></script>
+        <!-- Registering a service worker -->
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/serviceworker.js').then(function(registration) {
+                    // Registration was successful
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }, function(err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                    });
+                });
+            }
+        </script>
     </head>
     <body>
         <header>
