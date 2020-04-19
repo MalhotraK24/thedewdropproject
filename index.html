@@ -7,11 +7,13 @@
         <meta name="keywords" content="Photography Wedding Prewedding Shoot">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="Description" content="The Dewdrop Project - a photography company, wedding photography, prewedding pohotgraphy, kids shoot, maternity shoots, corporate shoots.">
+        <meta name="theme-color" content="#FFF">
         <!-- Title of the page -->
         <title>The Dewdrop Project</title>
         <!-- Icons -->
         <link rel="icon" type="image/x-icon" href="./Gallery/Icons/favicon_io/favicon.ico">
         <link rel="apple-touch-icon" sizes="192x192" href="./Gallery/Icons/favicon_io/apple-touch-icon.png">
+        <link rel="manifest" href="/manifest.json">
         <!-- CSS references -->
         <link rel="stylesheet" type="text/css" href="./CSS/main.min.css" media="all">
         <link rel="stylesheet" type="text/css" href="./CSS/Plugins/slider.min.css" media="all">
@@ -26,6 +28,20 @@
         <script src="./JS/Plugins/simple-lightbox.min.js" type="text/javascript" async></script>
         <script src="./JS/Plugins/alert.min.js" type="text/javascript" async></script>
         <script src="./JS/main.min.js" type="text/javascript" async></script>
+        <!-- Registering a service worker -->
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/serviceworker.js').then(function(registration) {
+                    // Registration was successful
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    }, function(err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                    });
+                });
+            }
+        </script>
     </head>
     <body>
         <header>
