@@ -25,55 +25,55 @@ gulp.task("nunjucks", function () {
 });
 
 // Minify CSS
-const cleanCSS = require("gulp-clean-css");
+// const cleanCSS = require("gulp-clean-css");
 
-gulp.task("minify-css", () => {
-  return gulp
-    .src("CSS/*.css")
-    .pipe(cleanCSS({ compatibility: "ie8" }))
-    .pipe(gulp.dest("css-dist"));
-});
+// gulp.task("minify-css", () => {
+//   return gulp
+//     .src("CSS/*.css")
+//     .pipe(cleanCSS({ compatibility: "ie8" }))
+//     .pipe(gulp.dest("css-dist"));
+// });
 
 // Compress PNGImages
-const PNGImages = "Images/Icons/*.png";
-const output = "Gallery/Icons";
+// const PNGImages = "Images/Icons/*.png";
+// const output = "Gallery/Icons";
 
-gulp.task("compress-png-images", () => {
-  imagemin([PNGImages], {
-    destination: output,
-    plugins: [imageminPngquant({ quality: [0.3, 0.5] })],
-  })
-    .then(console.log("Compression successful!"))
-    .catch((error) => console.log(error));
-});
+// gulp.task("compress-png-images", () => {
+//   imagemin([PNGImages], {
+//     destination: output,
+//     plugins: [imageminPngquant({ quality: [0.3, 0.5] })],
+//   })
+//     .then(console.log("Compression successful!"))
+//     .catch((error) => console.log(error));
+// });
 
 // Compress JPGImages
-const JPEGImages = "Images/Icons/{nbt|ht}-logo.{jpg,jpeg}";
+// const JPEGImages = "Images/Icons/{nbt|ht}-logo.{jpg,jpeg}";
 
-gulp.task("compress-jpg-images", () => {
-  imagemin([JPEGImages], {
-    destination: output,
-    plugins: [
-      imageminMozjpeg({
-        quality: 50,
-        progressive: true,
-      }),
-    ],
-  })
-    .then(console.log("Compression successful!"))
-    .catch((error) => console.log(error));
-});
+// gulp.task("compress-jpg-images", () => {
+//   imagemin([JPEGImages], {
+//     destination: output,
+//     plugins: [
+//       imageminMozjpeg({
+//         quality: 50,
+//         progressive: true,
+//       }),
+//     ],
+//   })
+//     .then(console.log("Compression successful!"))
+//     .catch((error) => console.log(error));
+// });
 
 // Resize Images to 225x225
-const fs = require("fs");
-const resizeImg = require("resize-img");
-gulp.task("resize-images", () => {
-  const image = resizeImg(fs.readFileSync("Images/Icons/ht-logo.jpeg"), {
-    width: 225,
-    height: 225,
-  });
-  fs.writeFileSync("Images/Icons/ht-logo.jpeg", image);
-});
+// const fs = require("fs");
+// const resizeImg = require("resize-img");
+// gulp.task("resize-images", () => {
+//   const image = resizeImg(fs.readFileSync("Images/Icons/ht-logo.jpeg"), {
+//     width: 225,
+//     height: 225,
+//   });
+//   fs.writeFileSync("Images/Icons/ht-logo.jpeg", image);
+// });
 
 // Old method to compress images
 // exports.default = () => (
