@@ -1,0 +1,129 @@
+{% set image_defaultpath = "../Gallery" %}
+{% extends "layout.njk" -%}
+
+{% block content -%}
+{% import '../templates/macros/navigation.njk' as nav -%}
+{{nav.active('home')}}
+<header>
+    <div class="header">
+        <div class="logo">
+            <img src="{{image_defaultpath}}/Icons/Watermark_TDP_Black.png" alt="watermark">
+        </div>
+    </div>
+    <div class="container">
+        <div class="header-content">
+            <h1 class="title">The Dewdrop Project</h1><hr>
+            <p class="subtitle">Wedding Photographers</p>
+            <p class="caption">Capturing moments since 2015</p>
+        </div>
+    </div>
+    <div class="slideshow-container" class="visually-hidden">
+        <div class="mySlides fade">
+            <div class="banner-image-ridhima"></div>
+        </div>
+        <div class="mySlides fade">
+            <div class="banner-image-rohan"></div>
+        </div>
+        <div class="mySlides fade">
+            <div class="banner-image-jasmine"></div>
+        </div>
+    </div>
+</header>
+<div id="portfolio" class="gallery-title">
+    <h1>Portfolio</h2>
+    <hr/>
+</div>
+<section class="grid">
+    <div class="gallery">
+        <a href="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-1.jpg" class="gallery__item--1">
+            <img src="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-1.jpg" alt="gallery-item-1">
+        </a>
+        <a href="{{image_defaultpath}}/Disha-Sanchit/Cocktail-1.jpg" class="gallery__item--2">
+            <img src="{{image_defaultpath}}/Disha-Sanchit/Cocktail-1.jpg" alt="gallery-item-2">
+        </a>
+        <a href="{{image_defaultpath}}/Pratishtha/Wedding-1.jpg" class="gallery__item--3">
+            <img src="{{image_defaultpath}}/Pratishtha/Wedding-1.jpg" alt="gallery-item-3">
+        </a>
+        <a href="{{image_defaultpath}}/Pratishtha/Wedding-2.jpg" class="gallery__item--4">
+            <img src="{{image_defaultpath}}/Pratishtha/Wedding-2.jpg" alt="gallery-item-4">
+        </a>
+        <a href="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-2.jpg" class="gallery__item--5">
+            <img src="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-2.jpg" alt="gallery-item-5">
+        </a>
+        <a href="{{image_defaultpath}}/Disha-Sanchit/Wedding-3.jpg" class="gallery__item--6">
+            <img src="{{image_defaultpath}}/Disha-Sanchit/Wedding-3.jpg" alt="gallery-item-6">
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-3.jpg" class="gallery__item--1">
+            <img src="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-3.jpg" alt="gallery-item-1">
+        </a>
+        <a href="{{image_defaultpath}}/Banners/Banner2.jpg" class="gallery__item--2">
+            <img src="{{image_defaultpath}}/Banners/Banner2.jpg" alt="gallery-item-2">
+        </a>
+        <a href="{{image_defaultpath}}/InKa/Wedding-3.jpg" class="gallery__item--3">
+            <img src="{{image_defaultpath}}/InKa/Wedding-3.jpg" alt="gallery-item-3">
+        </a>
+        <a href="{{image_defaultpath}}/Pratishtha/Wedding-4.jpg" class="gallery__item--4">
+            <img src="{{image_defaultpath}}/Pratishtha/Wedding-4.jpg" alt="gallery-item-4">
+        </a>
+        <a href="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-5.jpg" class="gallery__item--5">
+            <img src="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-5.jpg" alt="gallery-item-5">
+        </a>
+        <a href="{{image_defaultpath}}/Banners/Banner3.jpg" class="gallery__item--6">
+            <img src="{{image_defaultpath}}/Banners/Banner3.jpg" alt="gallery-item-6">
+        </a>
+    </div>
+    <div class="gallery">
+        <a href="{{image_defaultpath}}/InKa/Wedding-2.jpg" class="gallery__item--1">
+            <img src="{{image_defaultpath}}/InKa/Wedding-2.jpg" alt="gallery-item-1">
+        </a>
+        <a href="{{image_defaultpath}}/Sonalika/Mehendi-1.jpg" class="gallery__item--2">
+            <img src="{{image_defaultpath}}/Sonalika/Mehendi-1.jpg" alt="gallery-item-2">
+        </a>
+        <a href="{{image_defaultpath}}/Pratishtha/Wedding-3.jpg" class="gallery__item--3">
+            <img src="{{image_defaultpath}}/Pratishtha/Wedding-3.jpg" alt="gallery-item-3">
+        </a>
+        <a href="{{image_defaultpath}}/Sonalika/Wedding-1.jpg" class="gallery__item--4">
+            <img src="{{image_defaultpath}}/Sonalika/Wedding-1.jpg" alt="gallery-item-4">
+        </a>
+        <a href="{{image_defaultpath}}/Disha-Sanchit/Cocktail-2.jpg" class="gallery__item--5">
+            <img src="{{image_defaultpath}}/Disha-Sanchit/Cocktail-2.jpg" alt="gallery-item-5">
+        </a>
+        <a href="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-6.jpg" class="gallery__item--6">
+            <img src="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-6.jpg" alt="gallery-item-6">
+        </a>
+    </div>
+</section>
+<div class="container">
+    <div class="banner-image-3 section-separation-image"></div>
+    <div class="header-content image-content">
+        <p class="subtitle">"Capturing the moments of today to wow your heart tomorrow"</p>
+    </div>
+</div>
+{% include "./partials/_contact.njk" %}
+<section class="before-footer">
+    <div class="features">
+        <h2>We have been featured on</h2>
+        <hr/>
+        <div class="logos">
+            <img src="{{image_defaultpath}}/Icons/weddingsutra-logo.png" alt="weddingsutra-logo">
+            <img src="{{image_defaultpath}}/Icons/bridalaffairindia-logo.png" alt="bridalaffair-india-logo">
+            <img src="{{image_defaultpath}}/Icons/zowed-logo.png" alt="zowed-logo">
+            <img src="{{image_defaultpath}}/Icons/wedabout-logo.png" alt="wedabout-logo">
+            <img src="{{image_defaultpath}}/Icons/wedzo-logo.jpeg" alt="wedzo-logo">
+            <img src="{{image_defaultpath}}/Icons/fabweddings-logo.jpeg" alt="fabweddings-logo">
+            <img src="{{image_defaultpath}}/Icons/weddingzin-logo.jpeg" alt="weddingzin-logo">
+            <img src="{{image_defaultpath}}/Icons/shaadiwish-logo.jpeg" alt="shaadiwish-logo">
+            <img src="{{image_defaultpath}}/Icons/weddingplz-logo.jpeg" alt="wedding-plz-logo">
+            <img src="{{image_defaultpath}}/Icons/wittyvows-logo.jpeg" alt="wittyvows-logo">
+            <img src="{{image_defaultpath}}/Icons/zankyou-logo.jpeg" alt="zankyou-logo">
+            <img src="{{image_defaultpath}}/Icons/indiangramwedding-logo.jpeg" alt="indiangram-wedding-logo">
+            <img src="{{image_defaultpath}}/Icons/shaadisaga-logo.png" alt="shaadisaga-logo">
+            <img src="{{image_defaultpath}}/Icons/ht-logo.jpeg" alt="hindustan-times-logo">
+            <img src="{{image_defaultpath}}/Icons/nbt-logo.jpg" alt="nav-bharat-times-logo">
+        </div>
+    </div>
+</section>
+
+{%- endblock %}
