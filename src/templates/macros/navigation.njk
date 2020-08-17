@@ -1,0 +1,44 @@
+{% set image_defaultpath = "assets/images" %}
+
+{% macro active(activePage) %}
+    {%if activePage == 'home' %}
+        <nav class="navigation">
+            <ul class="menu">
+                <li class="menu-items"><a href="#portfolio" class="menu-link">Portfolio</a></li>
+                <li class="menu-items"><a href="./testimonials.html" class="menu-link">Testimonials</a></li>
+                <li class="menu-items"><a href="./team.html" class="menu-link">Team</a></li>
+                <li class="menu-items"><a href="#contact-us" class="menu-link">Contact</a></li>
+            </ul>
+        </nav>
+    {% endif %}
+    {%if activePage == 'testimonials' %}
+        <nav class="navigation">
+            <div class="tdp-logo">
+                <a href="./index.html">
+                    <img src="{{image_defaultpath}}/Icons/Watermark_TDP_Black.png" alt="logo">
+                </a>
+            </div>
+            <ul class="menu">
+                <li class="menu-items"><a href="./index.html#portfolio" class="menu-link">Portfolio</a></li>
+                <li class="menu-items active"><a href="./testimonials.html" class="menu-link">Testimonials</a></li>
+                <li class="menu-items"><a href="./team.html" class="menu-link">Team</a></li>
+                <li class="menu-items"><a href="./index.html#contact-us" class="menu-link">Contact</a></li>
+            </ul>
+        </nav>
+    {% endif %}
+    {%if activePage == 'team' %}
+        <nav class="navigation">
+            <div class="tdp-logo">
+                <a href="./index.html">
+                    <img src="{{image_defaultpath}}/Icons/Watermark_TDP_Black.png" alt="logo">
+                </a>
+            </div>
+            <ul class="menu">
+                <li class="menu-items"><a href="./index.html#portfolio" class="menu-link">Portfolio</a></li>
+                <li class="menu-items"><a href="./testimonials.html" class="menu-link">Testimonials</a></li>
+                <li class="menu-items active"><a href="./team.html" class="menu-link">Team</a></li>
+                <li class="menu-items"><a href="./index.html#contact-us" class="menu-link">Contact</a></li>
+            </ul>
+        </nav>
+    {% endif %}
+{% endmacro %}

@@ -4,6 +4,9 @@
   "description": "Website for The Dewdrop Project company",
   "main": "index.js",
   "scripts": {
+    "setup": "npm install",
+    "start": "gulp",
+    "publish": "gulp publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,8 +24,12 @@
     "compass": "^0.1.1",
     "contentful": "^7.14.2",
     "css-minify": "^1.0.1",
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-nunjucks-render": "^2.2.3",
+    "gulp-shell": "^0.8.0",
+    "gulp-uglify": "^3.0.2",
     "imagemin": "^7.0.1",
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-mozjpeg": "^8.0.0",

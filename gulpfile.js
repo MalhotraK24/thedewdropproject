@@ -1,28 +1,176 @@
-var gulp = require("gulp");
-var nunjucksRender = require("gulp-nunjucks-render");
+// --------------------------------------------------------
+// Dependencies
+// --------------------------------------------------------
 
-const imagemin = require("imagemin");
-const imageminWebp = require("imagemin-webp");
-const imageminOptipng = require("imagemin-optipng");
-const imageminJpegtran = require("imagemin-jpegtran");
-const imageminMozjpeg = require("imagemin-mozjpeg");
-const imageminPngquant = require("imagemin-pngquant");
+// Utils...
+const gulp = require("gulp"),
+  del = require("del"),
+  shell = require("gulp-shell"),
+  nunjucksRender = require("gulp-nunjucks-render");
 
-gulp.task("nunjucks", function () {
+// Image...
+const imagemin = require("imagemin"),
+  imageminWebp = require("imagemin-webp"),
+  imageminOptipng = require("imagemin-optipng"),
+  imageminJpegtran = require("imagemin-jpegtran"),
+  imageminMozjpeg = require("imagemin-mozjpeg"),
+  imageminPngquant = require("imagemin-pngquant");
+
+// CSS...
+const cleanCSS = require("gulp-clean-css");
+
+// JS...
+const uglifyJS = require("gulp-uglify");
+
+// HTML
+const htmlmin = require("gulp-htmlmin");
+
+// --------------------------------------------------------
+// Configuration
+// --------------------------------------------------------
+
+// Root directories...
+const root = {
+  src: "src/", // Source code 'root'
+  dist: "dist/", // Distribution code 'root'
+};
+
+// Code location paths...
+const paths = {
+  styles: {
+    src: `${root.src}css/`,
+    dist: `${root.dist}assets/css/`,
+    plugins: {
+      src: `${root.src}css/plugins/`,
+      dist: `${root.dist}assets/css/plugins/`,
+    },
+  },
+  scripts: {
+    src: `${root.src}js/`,
+    dist: `${root.dist}assets/js/`,
+    plugins: {
+      src: `${root.src}js/plugins/`,
+      dist: `${root.dist}assets/js/plugins/`,
+    },
+  },
+  images: {
+    src: `${root.src}assets/images/`,
+    dist: `${root.dist}assets/images/`,
+  },
+  html: {
+    src: `${root.src}`,
+    dist: `${root.dist}`,
+  },
+};
+
+// --------------------------------------------------------
+// Tasks
+// --------------------------------------------------------
+
+// Clean / delete the 'dist' directory...
+function cleanDist() {
+  return del([root.dist]);
+}
+
+// Styles minify...
+function stylesMin() {
+  return gulp
+    .src([
+      `${paths.styles.src}**/*.css`,
+      `!${paths.styles.plugins.src}**/*.css`,
+    ]) // Ignore the vendor JS])
+    .pipe(cleanCSS({ compatibility: "ie8" }))
+    .pipe(gulp.dest(paths.styles.dist));
+}
+
+// Copy JS Vendor files...
+function stylesPlugins() {
+  return gulp
+    .src([
+      // [Option A]: Grab all vendor script files...
+      `${paths.styles.plugins.src}**/*.css`,
+    ])
+    .pipe(gulp.dest(paths.styles.plugins.dist));
+}
+
+function scriptsMin() {
+  return gulp
+    .src([
+      `${paths.scripts.src}**/*.js`, // All the custom JS
+      `!${paths.scripts.plugins.src}**/*.js`, // Ignore the vendor JS
+    ])
+    .pipe(uglifyJS())
+    .pipe(gulp.dest(paths.scripts.dist));
+}
+
+// Copy JS Vendor files...
+function scriptsPlugins() {
+  return gulp
+    .src([
+      // [Option A]: Grab all vendor script files...
+      `${paths.scripts.plugins.src}**/*.js`,
+    ])
+    .pipe(gulp.dest(paths.scripts.plugins.dist));
+}
+
+function html() {
   // Gets .html and .nunjucks files in pages
   return (
     gulp
-      .src("app/pages/**/*.+(html|njk)")
+      .src(`${paths.html.src}pages/**/*.+(html|njk)`)
       // Renders template with nunjucks
       .pipe(
         nunjucksRender({
-          path: ["app/templates"],
+          path: ["src/templates"],
         })
       )
       // output files in app folder
       .pipe(gulp.dest("dist"))
   );
-});
+}
+
+// HTML minify...
+function htmlMin() {
+  return gulp
+    .src(`${paths.html.dist}**/*.html`)
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest(paths.html.dist));
+}
+
+// Copy already optimised images...
+function images() {
+  return gulp.src(`${paths.images.src}**/*`).pipe(gulp.dest(paths.images.dist));
+}
+
+// Copy various files...
+function copyMisc() {
+  return gulp
+    .src(
+      [
+        `${root.src}assets/fonts/**/*`,
+        `${root.src}assets/manifest.json`,
+        `${root.src}assets/serviceworker*.js`, // All service worker files in the root directory
+      ],
+      { base: root.src }
+    )
+    .pipe(gulp.dest(root.dist));
+}
+
+const publishSet = gulp.series(
+  cleanDist,
+  stylesMin,
+  scriptsMin,
+  html,
+  htmlMin,
+
+  // Parallel tasks...
+  gulp.parallel(stylesPlugins, scriptsPlugins, images, copyMisc)
+);
+
+// A 'shell' task placeholder for now...
+gulp.task("messageStart", shell.task("echo Site is building..."));
+gulp.task("messageEnd", shell.task("echo Site is finished building."));
+gulp.task("publish", gulp.series("messageStart", publishSet, "messageEnd")); // Full build ('optimised' - ie. ready for production)
 
 // Minify CSS
 // const cleanCSS = require("gulp-clean-css");
