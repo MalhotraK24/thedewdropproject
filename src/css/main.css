@@ -8,12 +8,15 @@
 /* Fonts */
 @font-face {
   font-family: "ostrich-sans";
-  src: url("../../fonts/ostrich-sans/OstrichSans-Black.otf") format("otf"),
-    url("../../fonts/ostrich-sans/OstrichSans-Heavy.otf") format("otf"),
-    url("../../fonts/ostrich-sans/OstrichSans-Light.otf") format("otf"),
-    url("../../fonts/ostrich-sans/OstrichSans-Medium.otf") format("otf"),
-    url("../../fonts/ostrich-sans/OstrichSansRounded-Medium.otf") format("otf"),
-    url("../../fonts/ostrich-sans/ostrich-regular.ttf") format("truetype");
+  src: url("../../assets/fonts/ostrich-sans/OstrichSans-Black.otf")
+      format("otf"),
+    url("../../assets/fonts/ostrich-sans/OstrichSans-Heavy.otf") format("otf"),
+    url("../../assets/fonts/ostrich-sans/OstrichSans-Light.otf") format("otf"),
+    url("../../assets/fonts/ostrich-sans/OstrichSans-Medium.otf") format("otf"),
+    url("../../assets/fonts/ostrich-sans/OstrichSansRounded-Medium.otf")
+      format("otf"),
+    url("../../assets/fonts/ostrich-sans/ostrich-regular.ttf")
+      format("truetype");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -21,7 +24,7 @@
 
 @font-face {
   font-family: "gotu";
-  src: url("../../fonts/gotu/Gotu-Regular.ttf") format("truetype");
+  src: url("../../assets/fonts/gotu/Gotu-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -29,7 +32,7 @@
 
 /* Body */
 body {
-  font-family: "ostrich-sans", "Gotu", "FS Joey Web Light",
+  font-family: "ostrich-sans", "gotu", "FS Joey Web Light",
     "FS Joey Web Regular", sans-serif;
 }
 
@@ -206,27 +209,27 @@ header {
 }
 
 .banner-image-1 {
-  background-image: url(../../images/Banners/Banner1.jpg);
+  background-image: url(../../assets/images/Banners/Banner1.jpg);
 }
 
 .banner-image-2 {
-  background-image: url(../../images/Banners/Banner2.jpg);
+  background-image: url(../../assets/images/Banners/Banner2.jpg);
 }
 
 .banner-image-3 {
-  background-image: url(../../images/Disha-Sanchit/Wedding-1.jpg);
+  background-image: url(../../assets/images/Disha-Sanchit/Wedding-1.jpg);
 }
 
 .banner-image-jasmine {
-  background-image: url(../../images/Banners/jasmine-getting-ready.jpg);
+  background-image: url(../../assets/images/Banners/jasmine-getting-ready.jpg);
 }
 
 .banner-image-ridhima {
-  background-image: url(../../images/Banners/ridhima-getting-ready.jpg);
+  background-image: url(../../assets/images/Banners/ridhima-getting-ready.jpg);
 }
 
 .banner-image-rohan {
-  background-image: url(../../images/Banners/rohan-cocktail.jpg);
+  background-image: url(../../assets/images/Banners/rohan-cocktail.jpg);
 }
 
 hr {

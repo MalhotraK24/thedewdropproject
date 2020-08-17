@@ -1,5 +1,5 @@
 {% set image_defaultpath="assets/images" %}
-{% set css_defaultpath="assets/css/" %}
+{% set css_defaultpath="assets/css" %}
 {% set js_defaultpath="assets/js" %}
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
         <!-- Icons -->
         <link rel="icon" type="image/x-icon" href="{{image_defaultpath}}/Icons/favicon_io/favicon.ico">
         <link rel="apple-touch-icon" sizes="192x192" href="{{image_defaultpath}}/Icons/favicon_io/apple-touch-icon.png">
-        <link rel="manifest" href="/manifest.json">
+        <link rel="manifest" href="assets/manifest.json">
         <!-- CSS references -->
         <link rel="stylesheet" type="text/css" href="{{css_defaultpath}}/main.css" media="all">
         <link rel="stylesheet" type="text/css" href="{{css_defaultpath}}/plugins/slider.css" media="all">
@@ -36,7 +36,7 @@
         <script>
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function() {
-                    navigator.serviceWorker.register('/serviceworker.js').then(function(registration) {
+                    navigator.serviceWorker.register('assets/serviceworker.js').then(function(registration) {
                     // Registration was successful
                         console.log('ServiceWorker registration successful with scope: ', registration.scope);
                     }, function(err) {
