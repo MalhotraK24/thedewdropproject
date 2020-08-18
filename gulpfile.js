@@ -6,6 +6,7 @@
 const gulp = require("gulp"),
   del = require("del"),
   shell = require("gulp-shell"),
+  data = require("gulp-data"),
   nunjucksRender = require("gulp-nunjucks-render");
 
 // Image...
@@ -118,6 +119,12 @@ function html() {
   return (
     gulp
       .src(`${paths.html.src}pages/**/*.+(html|njk)`)
+      // Adding data to Nunjucks
+      .pipe(
+        data(function () {
+          return require("./src/datasources/feedback.json");
+        })
+      )
       // Renders template with nunjucks
       .pipe(
         nunjucksRender({
@@ -148,6 +155,7 @@ function copyMisc() {
     .src(
       [
         `${root.src}assets/fonts/**/*`,
+        `${root.src}datasources/feedback.json`,
         `${root.src}assets/manifest.json`,
         `${root.src}assets/serviceworker*.js`, // All service worker files in the root directory
       ],
@@ -195,8 +203,9 @@ gulp.task("publish", gulp.series("messageStart", publishSet, "messageEnd")); // 
 //     .catch((error) => console.log(error));
 // });
 
-// Compress JPGImages
-// const JPEGImages = "Images/Icons/{nbt|ht}-logo.{jpg,jpeg}";
+//Compress JPGImages
+// const JPEGImages = "src/assets/images/Banners/testimonials.{jpg,jpeg}";
+// const output = "dist/assets/images/Banners";
 
 // gulp.task("compress-jpg-images", () => {
 //   imagemin([JPEGImages], {
