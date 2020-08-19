@@ -4,6 +4,12 @@
   "description": "Weather forecast information",
   "icons": [
     {
+      "src": "/assets/images/Icons/favicon_io/maskable_icon.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
       "src": "/assets/images/Icons/favicon_io/android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
