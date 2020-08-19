@@ -1,0 +1,25 @@
+{% extends "layout.njk" -%}
+
+{% block content -%}
+{% import '../templates/macros/navigation.njk' as nav -%}
+    {{nav.active('testimonials')}}
+    {% for feedback in feedbacks -%}
+        {% if (loop.index%2 == 1) %}
+        <div class="testimonial-header">
+        {% else %}
+        <div class="testimonial-header reverse-direction">
+        {% endif %}
+                <div class="testimonial">
+                    <div class="testimonial-banner-image">
+                        <img src="{{ feedback.src }}" alt="testimonial-banner-image">
+                    </div>
+                </div>
+            <div class="feedback">
+                <h2 class="client-name">{{ feedback.clientName }}</h2>
+                <h3 class="client-date">{{ feedback.clientDate }}</h3>
+                <hr/>
+                <p>{{ feedback.text }}</p>
+            </div>
+        </div>
+    {%- endfor %}
+{%- endblock %}

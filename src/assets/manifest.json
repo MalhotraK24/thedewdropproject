@@ -1,0 +1,22 @@
+{
+  "short_name": "TDP",
+  "name": "The Dewdrop Project",
+  "description": "Weather forecast information",
+  "icons": [
+    {
+      "src": "/assets/images/Icons/favicon_io/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/images/Icons/favicon_io/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#FFF",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#FFF"
+}
