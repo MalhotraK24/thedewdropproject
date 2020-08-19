@@ -122,7 +122,7 @@ function html() {
       // Adding data to Nunjucks
       .pipe(
         data(function () {
-          return require("./src/datasources/feedback.json");
+          return require("./src/datasources/data.json");
         })
       )
       // Renders template with nunjucks
@@ -155,7 +155,7 @@ function copyMisc() {
     .src(
       [
         `${root.src}assets/fonts/**/*`,
-        `${root.src}datasources/feedback.json`,
+        `${root.src}datasources/*.json`,
         `${root.src}assets/manifest.json`,
         `${root.src}assets/serviceworker*.js`, // All service worker files in the root directory
       ],

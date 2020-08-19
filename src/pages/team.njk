@@ -2,5 +2,27 @@
 
 {% block content -%}
 {% import '../templates/macros/navigation.njk' as nav -%}
-    {{nav.active('team')}}
+{{ nav.active('team') }}
+<div class="about-us-content">
+    <h1 class="title">About Us</h1>
+    <hr>
+    <p class="about-us">At The Dewdrop Project, we believe - 'A Picture is worth a thousand words'. What you can't express in lofty words, the picture does it in seconds.We take pride in capturing the best moments of your special day to make it an everlasting memory.  We have more than 4 years of experience in the field of photography. We have been fortunate to capture smiles and memories of hundreds of families.We are a team of dedicated professionals who believe weddings are special in one's life and our team ensures that by capturing the mood of every event.</p>
+</div>
+<div class="team">
+    <h1 class="title">Our Team</h1>
+    <hr>
+    {% for member in members -%}
+        {% if (loop.index%4 == 1) -%}
+        <div class="pictures">
+        {%- endif %}
+            <div class="member">
+                <img src={{ member.src }} alt="testimonial-banner-image">
+                <p class="member-name">{{ member.memberName }}</p>
+                <p class="member-title">{{ member.memberTitle }}</p>
+            </div>
+        {% if (loop.index/4 == 1) -%}
+        </div>
+        {%- endif %}
+    {%- endfor %}
+</div>
 {%- endblock %}

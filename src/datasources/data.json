@@ -2,7 +2,7 @@
   "feedbacks": [
     {
       "src": "assets/images/Pratishtha/Wedding-4.jpg",
-      "clientName": "Prtishtha & Sahil",
+      "clientName": "Pratishtha & Sahil",
       "clientDate": "November 2019",
       "text": "When for the first time I saw their work on Instagram I was sure I want them to cover my wedding. Inushi and her team is brilliant at their job and without any worry you can rely on them for everything and they will not only be there just as your photography team but will make you so comfortable that you will feel they are there as your friends. I am glad I chose The Dewdrop Project for my big day. All thanks to Inushi, Ashish and the rest of the team for giving me the best memories."
     },
@@ -17,6 +17,48 @@
       "clientName": "Disha & Sanchit",
       "clientDate": "September 2019",
       "text": "When for the first time I saw their work on Instagram I was sure I want them to cover my wedding. Inushi and her team is brilliant at their job and without any worry you can rely on them for everything and they will not only be there just as your photography team but will make you so comfortable that you will feel they are there as your friends. I am glad I chose The Dewdrop Project for my big day. All thanks to Inushi, Ashish and the rest of the team for giving me the best memories."
+    }
+  ],
+  "members": [
+    {
+      "src": "assets/images/about-us.jpg",
+      "memberName": "Inushi Singh",
+      "memberTitle": "Creative Director"
+    },
+    {
+      "src": "assets/images/about-us.jpg",
+      "memberName": "Sinkander Singh",
+      "memberTitle": "Freelance Photographer"
+    },
+    {
+      "src": "assets/images/about-us.jpg",
+      "memberName": "Manish Sahdev",
+      "memberTitle": "Freelance Cinematographer"
+    },
+    {
+      "src": "assets/images/about-us.jpg",
+      "memberName": "Kashish Narula",
+      "memberTitle": "Video Editor"
+    },
+    {
+      "src": "assets/images/about-us.jpg",
+      "memberName": "Inushi Singh",
+      "memberTitle": "Creative Director"
+    },
+    {
+      "src": "assets/images/about-us.jpg",
+      "memberName": "Sinkander Singh",
+      "memberTitle": "Freelance Photographer"
+    },
+    {
+      "src": "assets/images/about-us.jpg",
+      "memberName": "Manish Sahdev",
+      "memberTitle": "Freelance Cinematographer"
+    },
+    {
+      "src": "assets/images/about-us.jpg",
+      "memberName": "Kashish Narula",
+      "memberTitle": "Video Editor"
     }
   ]
 }

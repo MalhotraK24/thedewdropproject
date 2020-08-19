@@ -99,15 +99,7 @@ a:hover {
 
 .active {
   line-height: 25px;
-  border-bottom: solid white 1px;
-}
-
-.bg-color-balck {
-  background-color: black;
-}
-
-.text-color-white {
-  color: white;
+  border-bottom: solid black 1px;
 }
 
 /* Navigation */
@@ -938,12 +930,24 @@ footer .copyright {
   display: flex;
   flex-direction: row;
   background-color: whitesmoke;
-  margin-bottom: 20px;
+  margin: 0px 90px 30px 90px;
+}
+@media only screen and (min-width: 900px) and (max-width: 1100px) {
+  .testimonial-header {
+    flex-direction: row;
+    margin: 0px 70px 25px 70px;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .testimonial-header {
+    flex-direction: row;
+    margin: 0px 40px 20px 40px;
+  }
 }
 @media only screen and (max-width: 600px) {
   .testimonial-header {
     flex-direction: column;
-    margin-bottom: 15px;
+    margin: 0px 30px 15px 30px;
   }
 }
 
@@ -954,42 +958,42 @@ footer .copyright {
   padding: 10px;
 }
 
-.testimonial hr {
+.feedback hr {
   margin: 0px;
+  align-self: flex-start;
 }
 
 .client-name {
-  margin: 20px;
-  font-size: 25px;
+  margin: 0px 0px 10px 0px;
+  font-size: 23px;
+  letter-spacing: 0px;
 }
 @media only screen and (max-width: 400px) {
   .client-name {
-    margin: 15px;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 .client-date {
-  font-size: 20px;
+  font-size: 15px;
   letter-spacing: 0px;
-  margin: 20px;
+  margin: 0px 0px 10px 0px;
 }
 @media only screen and (max-width: 400px) {
   .client-date {
-    font-size: 18px;
-    margin: 15px;
+    font-size: 13px;
   }
 }
 
 .testimonial {
-  width: 40%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 @media only screen and (min-width: 600px) and (max-width: 800px) {
   .testimonial {
-    width: 50%;
+    width: 40%;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -1003,29 +1007,29 @@ footer .copyright {
 }
 
 .feedback {
-  width: 60%;
+  width: 70%;
   text-align: justify;
   justify-content: center;
   display: flex;
   flex-direction: column;
-  padding: 45px;
+  padding: 35px;
   font-family: gotu;
-  line-height: 30px;
+  line-height: 26px;
   font-size: 13px;
 }
 @media only screen and (min-width: 600px) and (max-width: 800px) {
   .feedback {
-    width: 50%;
-    padding: 20px 35px;
-    line-height: 28px;
+    width: 60%;
+    padding: 20px 30px;
+    line-height: 24px;
     font-size: 12px;
   }
 }
 @media only screen and (min-width: 400px) and (max-width: 600px) {
   .feedback {
     width: 100%;
-    padding: 20px 35px;
-    line-height: 28px;
+    padding: 20px 30px;
+    line-height: 22px;
     font-size: 12px;
   }
 }
@@ -1033,7 +1037,7 @@ footer .copyright {
   .feedback {
     width: 100%;
     padding: 15px 25px;
-    line-height: 26px;
+    line-height: 22px;
     font-size: 11px;
   }
 }
@@ -1048,3 +1052,64 @@ footer .copyright {
 }
 
 /* TESTIMONIAL COMPONENT CLASS (END) */
+
+/* TEAM or ABOUT US CLASS (START) */
+
+.about-us-content {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  padding: 40px;
+  align-items: center;
+}
+
+p.about-us {
+  font-family: gotu;
+  margin: 0px;
+  line-height: 26px;
+  font-size: 14px;
+  text-align: justify;
+  display: flex;
+  max-width: 750px;
+  justify-content: center;
+}
+
+.team {
+  padding: 50px 0px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.pictures {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.member {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 30px;
+}
+
+.member img {
+  width: 120px;
+  height: 160px;
+}
+
+p.member-name {
+  font-family: gotu;
+  font-size: 13px;
+  padding-top: 10px;
+  letter-spacing: 0px;
+}
+
+p.member-title {
+  letter-spacing: 1px;
+  margin-top: 0px;
+}
+
+/* TEAM or ABOUT US CLASS (END) */
