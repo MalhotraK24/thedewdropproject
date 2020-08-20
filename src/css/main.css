@@ -1085,10 +1085,17 @@ p.about-us {
 
 .pictures {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   padding-top: 30px;
   flex-direction: row;
   flex-flow: wrap;
+}
+@media only screen and (max-width: 400px) {
+  .pictures {
+    padding-top: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .member {
@@ -1096,6 +1103,7 @@ p.about-us {
   flex-direction: column;
   text-align: center;
   margin: 20px 30px;
+  align-items: center;
 }
 
 .member img {
