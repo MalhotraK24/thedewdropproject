@@ -1085,9 +1085,12 @@ p.about-us {
 
 .pictures {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   padding-top: 30px;
+  flex-direction: row;
+  flex-flow: wrap;
 }
+
 .member {
   display: flex;
   flex-direction: column;

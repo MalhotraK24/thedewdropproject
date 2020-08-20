@@ -11,18 +11,14 @@
 <div class="team">
     <h1 class="title">Our Team</h1>
     <hr>
+    <div class="pictures">
     {% for member in members -%}
-        {% if (loop.index%4 == 1) -%}
-        <div class="pictures">
-        {%- endif %}
-            <div class="member">
-                <img src={{ member.src }} alt="testimonial-banner-image">
-                <p class="member-name">{{ member.memberName }}</p>
-                <p class="member-title">{{ member.memberTitle }}</p>
-            </div>
-        {% if (loop.index/4 == 1) -%}
+        <div class="member">
+            <img src={{ member.src }} alt="testimonial-banner-image">
+            <p class="member-name">{{ member.memberName }}</p>
+            <p class="member-title">{{ member.memberTitle }}</p>
         </div>
-        {%- endif %}
     {%- endfor %}
+    </div>
 </div>
 {%- endblock %}
