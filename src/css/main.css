@@ -1015,14 +1015,14 @@ footer .copyright {
   padding: 35px;
   font-family: gotu;
   line-height: 26px;
-  font-size: 13px;
+  font-size: 14px;
 }
 @media only screen and (min-width: 600px) and (max-width: 800px) {
   .feedback {
     width: 60%;
     padding: 20px 30px;
     line-height: 24px;
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 @media only screen and (min-width: 400px) and (max-width: 600px) {
@@ -1030,7 +1030,7 @@ footer .copyright {
     width: 100%;
     padding: 20px 30px;
     line-height: 22px;
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -1038,7 +1038,7 @@ footer .copyright {
     width: 100%;
     padding: 15px 25px;
     line-height: 22px;
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 
@@ -1107,8 +1107,8 @@ p.about-us {
 }
 
 .member img {
-  width: 120px;
-  height: 160px;
+  width: 130px;
+  height: 195px;
 }
 
 p.member-name {
