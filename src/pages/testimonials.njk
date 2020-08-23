@@ -1,7 +1,12 @@
 {% extends "layout.njk" -%}
 
+{% block head -%}
+    {% import '../templates/macros/head.njk' as head -%}
+    {{head.render('testimonials')}}
+{%- endblock %}
+
 {% block content -%}
-{% import '../templates/macros/navigation.njk' as nav -%}
+    {% import '../templates/macros/navigation.njk' as nav -%}
     {{nav.active('testimonials')}}
     <div class="about-us-content">
         <h1 class="title">Client Testimonials</h1>
@@ -16,9 +21,7 @@
         <div class="testimonial-header reverse-direction">
         {% endif %}
                 <div class="testimonial">
-                    <div class="testimonial-banner-image">
-                        <img src="{{ feedback.src }}" alt="testimonial-banner-image">
-                    </div>
+                    <img src="{{ feedback.src }}" alt="testimonial-banner-image">
                 </div>
             <div class="feedback">
                 <h2 class="client-name">{{ feedback.clientName }}</h2>

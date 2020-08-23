@@ -1,27 +1,32 @@
 {% extends "layout.njk" -%}
 
+{% block head -%}
+    {% import '../templates/macros/head.njk' as head -%}
+    {{head.render('team')}}
+{%- endblock %}
+
 {% block content -%}
-{% import '../templates/macros/navigation.njk' as nav -%}
-{{ nav.active('team') }}
-<div class="about-us-content">
-    <h1 class="title">About Us</h1>
-    <hr>
-    <p class="about-us">Capturing close, personal moments for friends and family evolved from a hobby to a full blown career for the founders of The Dewdrop Project. With a perpetual love for vibrant colours and her travel experiences across the world meeting people from diverse cultures, The Dewdrop Project (TDP) is a perfect mix of class and sass much like the big fat indian weddings.</p>
-    <p class="about-us">"We know how important the wedding day is for the bride and groom and we certainly know the importance of that perfect shot- the 'look' capturing those sweetest unspoken moments among family members" - Inushi (Co-Founder, The Dewdrop Project).</p>
-    <p class="about-us">
-    TDP has shot over a hundred weddings across a variety of Indian traditions and customs. &nbsp; "Apart from the grandeur and the colour, what we love about indian weddings is the fact that every tradition stems from its own set of beliefs, which presents us with a huge creative learning curve."</p>
-</div>
-<div class="team">
-    <h1 class="title">Our Team</h1>
-    <hr>
-    <div class="pictures">
-    {% for member in members -%}
-        <div class="member">
-            <img src={{ member.src }} alt="testimonial-banner-image">
-            <p class="member-name">{{ member.memberName }}</p>
-            <p class="member-title">{{ member.memberTitle }}</p>
-        </div>
-    {%- endfor %}
+    {% import '../templates/macros/navigation.njk' as nav -%}
+    {{ nav.active('team') }}
+    <div class="about-us-content">
+        <h1 class="title">About Us</h1>
+        <hr>
+        <p class="about-us">Capturing close, personal moments for friends and family evolved from a hobby to a full blown career for the founders of The Dewdrop Project. With a perpetual love for vibrant colours and her travel experiences across the world meeting people from diverse cultures, The Dewdrop Project (TDP) is a perfect mix of class and sass much like the big fat indian weddings.</p>
+        <p class="about-us">"We know how important the wedding day is for the bride and groom and we certainly know the importance of that perfect shot- the 'look' capturing those sweetest unspoken moments among family members" - Inushi (Co-Founder, The Dewdrop Project).</p>
+        <p class="about-us">
+        TDP has shot over a hundred weddings across a variety of Indian traditions and customs. &nbsp; "Apart from the grandeur and the colour, what we love about indian weddings is the fact that every tradition stems from its own set of beliefs, which presents us with a huge creative learning curve."</p>
     </div>
-</div>
+    <div class="team">
+        <h1 class="title">Our Team</h1>
+        <hr>
+        <div class="pictures">
+        {% for member in members -%}
+            <div class="member">
+                <img src={{ member.src }} alt="testimonial-banner-image">
+                <p class="member-name">{{ member.memberName }}</p>
+                <p class="member-title">{{ member.memberTitle }}</p>
+            </div>
+        {%- endfor %}
+        </div>
+    </div>
 {%- endblock %}
