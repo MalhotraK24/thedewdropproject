@@ -1,5 +1,5 @@
 var CACHE_NAME = "pages-cache-v1";
-var urlsToCache = ["/", "css/main.css", "js/main.js"];
+var urlsToCache = ["/", "assets/css/main.css", "assets/js/main.js"];
 
 // Install the service worker with the predefined cache items
 self.addEventListener("install", function (event) {
