@@ -156,7 +156,7 @@ function copyMisc() {
       [
         `${root.src}assets/fonts/**/*`,
         `${root.src}datasources/*.json`,
-        `${root.src}/manifest.json`,
+        `${root.src}assets/manifest.json`,
         `${root.src}/serviceworker*.js`, // All service worker files in the root directory
       ],
       { base: root.src }
@@ -224,12 +224,18 @@ gulp.task("publish", gulp.series("messageStart", publishSet, "messageEnd")); // 
 // Resize Images to 225x225
 // const fs = require("fs");
 // const resizeImg = require("resize-img");
-// gulp.task("resize-images", () => {
-//   const image = resizeImg(fs.readFileSync("Images/Icons/ht-logo.jpeg"), {
-//     width: 225,
-//     height: 225,
-//   });
-//   fs.writeFileSync("Images/Icons/ht-logo.jpeg", image);
+// gulp.task("resize-images", async () => {
+//   const image = await resizeImg(
+//     fs.readFileSync("./src/assets/images/Icons/favicon_io/maskable_icon.png"),
+//     {
+//       width: 196,
+//       height: 196,
+//     }
+//   );
+//   fs.writeFileSync(
+//     "./src/assets/images/Icons/favicon_io/maskable_icon.png",
+//     image
+//   );
 // });
 
 // Old method to compress images
