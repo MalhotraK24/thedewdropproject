@@ -3,7 +3,7 @@ $(window).on("load", function () {
   autoSlides();
 
   // Hide the section displaying the gallery on load.
-  $("section.grid").attr("visibility", "hidden");
+  $("section.grid").addClass("visually-hidden");
   // Images loaded is zero because we're going to process a new set of images.
   var imagesLoaded = 0;
   // Total images is still the total number of <img> elements on the page.
