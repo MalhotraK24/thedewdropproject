@@ -262,6 +262,11 @@ hr {
   display: none;
 }
 
+.loading-images img {
+  width: 100%;
+  height: auto;
+}
+
 /* Header */
 .container {
   display: flex;

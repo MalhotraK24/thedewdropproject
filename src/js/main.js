@@ -28,8 +28,8 @@ $(window).on("load", function () {
 
   function allImagesLoaded() {
     console.log("ALL IMAGES LOADED");
-    $(".loading-images").addClass("hide");
-    $("section.grid").removeClass("hide");
+    $(".loading-images").addClass("visually-hidden");
+    $("section.grid").removeClass("visually-hidden");
     $(".gallery a").simpleLightbox();
   }
 
