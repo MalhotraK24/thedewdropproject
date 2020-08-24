@@ -40,6 +40,7 @@
     "jquery": "^3.5.1",
     "less": "^3.12.2",
     "lightgallery.js": "^1.2.0",
+    "resize-img": "^2.0.0",
     "sass": "^1.26.10"
   },
   "devDependencies": {
