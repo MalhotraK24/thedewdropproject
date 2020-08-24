@@ -32,11 +32,11 @@
     "gulp-shell": "^0.8.0",
     "gulp-uglify": "^3.0.2",
     "imagemin": "^7.0.1",
-    "imagemin-jpegtran": "^6.0.0",
-    "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-optipng": "^7.1.0",
-    "imagemin-pngquant": "^8.0.0",
-    "imagemin-webp": "^5.1.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-pngquant": "^9.0.0",
+    "imagemin-webp": "^6.0.0",
     "jquery": "^3.5.1",
     "less": "^3.12.2",
     "lightgallery.js": "^1.2.0",
@@ -45,6 +45,7 @@
   "devDependencies": {
     "gulp-clean-css": "^4.3.0",
     "gulp-imagemin": "^7.1.0",
-    "resize-img": "^2.0.0"
+    "resize-img": "^2.0.0",
+    "jpeg-js": "^0.4.1"
   }
 }
