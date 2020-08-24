@@ -87,44 +87,29 @@
   ],
   "members": [
     {
-      "src": "assets/images/about-us.jpg",
-      "memberName": "Inushi Singh",
-      "memberTitle": "Creative Director"
+      "src": "assets/images/Team/KusumS.jpg",
+      "memberName": "Kusum Singh",
+      "memberTitle": "Operations Manager (Co-founder)"
     },
     {
-      "src": "assets/images/about-us.jpg",
+      "src": "assets/images/Team/InushiS.jpg",
+      "memberName": "Inushi Singh",
+      "memberTitle": "Creative Director (Co-founder)"
+    },
+    {
+      "src": "assets/images/Team/SikanderJ.jpg",
       "memberName": "Sinkander Singh",
       "memberTitle": "Freelance Photographer"
     },
     {
-      "src": "assets/images/about-us.jpg",
+      "src": "assets/images/Team/MonuP.jpg",
+      "memberName": "Monu Panchal",
+      "memberTitle": "Freelance Photographerr"
+    },
+    {
+      "src": "assets/images/Team/ManishS.jpg",
       "memberName": "Manish Sahdev",
       "memberTitle": "Freelance Cinematographer"
-    },
-    {
-      "src": "assets/images/about-us.jpg",
-      "memberName": "Kashish Narula",
-      "memberTitle": "Video Editor"
-    },
-    {
-      "src": "assets/images/about-us.jpg",
-      "memberName": "Inushi Singh",
-      "memberTitle": "Creative Director"
-    },
-    {
-      "src": "assets/images/about-us.jpg",
-      "memberName": "Sinkander Singh",
-      "memberTitle": "Freelance Photographer"
-    },
-    {
-      "src": "assets/images/about-us.jpg",
-      "memberName": "Manish Sahdev",
-      "memberTitle": "Freelance Cinematographer"
-    },
-    {
-      "src": "assets/images/about-us.jpg",
-      "memberName": "Kashish Narula",
-      "memberTitle": "Video Editor"
     }
   ]
 }
