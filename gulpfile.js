@@ -156,7 +156,7 @@ function copyMisc() {
       [
         `${root.src}assets/fonts/**/*`,
         `${root.src}datasources/*.json`,
-        `${root.src}/manifest.json`,
+        `${root.src}assets/manifest.json`,
         `${root.src}/serviceworker*.js`, // All service worker files in the root directory
       ],
       { base: root.src }
