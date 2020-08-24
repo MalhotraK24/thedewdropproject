@@ -37,6 +37,7 @@
     "imagemin-optipng": "^8.0.0",
     "imagemin-pngquant": "^9.0.0",
     "imagemin-webp": "^6.0.0",
+    "jpeg-js": "^0.4.1",
     "jquery": "^3.5.1",
     "less": "^3.12.2",
     "lightgallery.js": "^1.2.0",
