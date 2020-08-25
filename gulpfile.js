@@ -191,11 +191,11 @@ gulp.task("publish", gulp.series("messageStart", publishSet, "messageEnd")); // 
 // });
 
 // Compress PNGImages
-// const PNGImages = "Images/Icons/*.png";
-// const output = "Gallery/Icons";
+// const PNGImages = "src/assets/images/Icons/*.png";
+// const output = "src/assets/images/Icons";
 
-// gulp.task("compress-png-images", () => {
-//   imagemin([PNGImages], {
+// gulp.task("compress-png-images", async () => {
+//   await imagemin([PNGImages], {
 //     destination: output,
 //     plugins: [imageminPngquant({ quality: [0.3, 0.5] })],
 //   })
@@ -204,8 +204,8 @@ gulp.task("publish", gulp.series("messageStart", publishSet, "messageEnd")); // 
 // });
 
 //Compress JPGImages
-// const JPEGImages = "src/assets/images/Team/*.{jpg,jpeg}";
-// const output = "dist/assets/images/Team";
+// const JPEGImages = "src/assets/images/Icons/*.{jpg,jpeg}";
+// const output = "src/assets/images/Icons";
 
 // gulp.task("compress-jpg-images", async () => {
 //   await imagemin([JPEGImages], {
