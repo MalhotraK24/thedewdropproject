@@ -99,17 +99,22 @@
     {
       "src": "assets/images/Team/SikanderJ.jpg",
       "memberName": "Sinkander Singh",
-      "memberTitle": "Photographer"
+      "memberTitle": "Lead Photographer"
+    },
+    {
+      "src": "assets/images/Team/Jeetu.jpg",
+      "memberName": "Jeetu",
+      "memberTitle": "Candid Photographer"
     },
     {
       "src": "assets/images/Team/MonuP.jpg",
       "memberName": "Monu Panchal",
-      "memberTitle": "Photographer"
+      "memberTitle": "Candid Photographer"
     },
     {
       "src": "assets/images/Team/ManishS.jpg",
       "memberName": "Manish Sahdev",
-      "memberTitle": "Cinematographer"
+      "memberTitle": "Lead Cinematographer"
     }
   ]
 }
