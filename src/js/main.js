@@ -1,6 +1,8 @@
 $(window).on("load", function () {
   // Call the autoslider method for banner images
-  autoSlides();
+  if ($(".slideshow-container").length > 0) {
+    autoSlides();
+  }
 
   // Hide the section displaying the gallery on load.
   $("section.grid").addClass("visually-hidden");
