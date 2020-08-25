@@ -204,11 +204,11 @@ gulp.task("publish", gulp.series("messageStart", publishSet, "messageEnd")); // 
 // });
 
 //Compress JPGImages
-// const JPEGImages = "src/assets/images/Banners/testimonials.{jpg,jpeg}";
-// const output = "dist/assets/images/Banners";
+// const JPEGImages = "src/assets/images/Team/*.{jpg,jpeg}";
+// const output = "dist/assets/images/Team";
 
-// gulp.task("compress-jpg-images", () => {
-//   imagemin([JPEGImages], {
+// gulp.task("compress-jpg-images", async () => {
+//   await imagemin([JPEGImages], {
 //     destination: output,
 //     plugins: [
 //       imageminMozjpeg({
