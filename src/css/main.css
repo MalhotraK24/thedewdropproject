@@ -216,6 +216,20 @@ header {
 }
 
 /* Banner Image */
+.banner-image {
+  min-height: 550px !important;
+}
+@media only screen and (mim-width: 600px) and (max-width: 900px) {
+  .banner-image {
+    min-height: 450px !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .banner-image {
+    min-height: 350px !important;
+  }
+}
+
 .banner-image-1,
 .banner-image-2,
 .banner-image-3,
@@ -278,11 +292,29 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 600px;
+}
+@media only screen and (max-width: 500px) {
+  .loading-images {
+    min-height: 400px;
+  }
 }
 
 .loading-images img {
   width: 50%;
   height: auto;
+}
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+  .loading-images img {
+    width: 70%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .loading-images img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /* Header */
@@ -561,17 +593,7 @@ section.grid {
 
 /* Section separation image */
 .section-separation-image {
-  min-height: 550px;
-}
-@media only screen and (mim-width: 600px) and (max-width: 900px) {
-  .section-separation-image {
-    min-height: 450px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .section-separation-image {
-    min-height: 350px;
-  }
+  min-height: 500px;
 }
 
 /* Contact Us Form */
