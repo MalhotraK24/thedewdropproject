@@ -111,11 +111,17 @@ nav {
   display: flex;
   flex-direction: row;
   position: absolute;
+  top: 10px;
   z-index: 99;
-  padding: 20px;
+  padding: 20px 15px;
   align-items: center;
   width: 100%;
   justify-content: space-evenly;
+}
+@media only screen and (max-width: 400px) {
+  nav {
+    padding: 10px;
+  }
 }
 
 div.tdp-logo {
@@ -130,11 +136,13 @@ div.tdp-logo {
 @media only screen and (min-width: 600px) and (max-width: 900px) {
   div.tdp-logo {
     width: 10%;
+    margin: 10px;
   }
 }
 @media only screen and (max-width: 600px) {
   div.tdp-logo {
     width: 12%;
+    margin: 8px;
   }
 }
 
@@ -146,7 +154,6 @@ ul.menu {
   justify-content: space-evenly;
   display: flex;
   flex-direction: row;
-  padding: 10px 0;
   align-items: center;
   width: 100%;
 }
@@ -154,16 +161,25 @@ ul.menu {
 li.menu-items {
   height: auto;
   list-style: none;
+  text-align: center;
   font-size: 22px;
 }
 @media only screen and (min-width: 600px) and (max-width: 900px) {
   li.menu-items {
-    font-size: 20px;
+    font-size: 18px;
+    margin-right: 10px;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 400px) and (max-width: 600px) {
   li.menu-items {
     font-size: 16px;
+    margin-right: 8px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  li.menu-items {
+    font-size: 12px;
+    margin-right: 6px;
   }
 }
 
