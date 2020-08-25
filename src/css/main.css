@@ -99,7 +99,7 @@ a:hover {
 
 .active {
   line-height: 25px;
-  border-bottom: solid black 1px;
+  border-bottom: solid white 1px;
 }
 
 .hide {
@@ -219,6 +219,7 @@ header {
 .banner-image-1,
 .banner-image-2,
 .banner-image-3,
+.banner-image-4,
 .banner-image-jasmine,
 .banner-image-ridhima,
 .banner-image-rohan {
@@ -238,6 +239,10 @@ header {
 
 .banner-image-3 {
   background-image: url(../../assets/images/Disha-Sanchit/Wedding-1.jpg);
+}
+
+.banner-image-4 {
+  background-image: url(../../assets/images/Banners/Banner5.jpg);
 }
 
 .banner-image-jasmine {
@@ -556,7 +561,17 @@ section.grid {
 
 /* Section separation image */
 .section-separation-image {
-  min-height: 500px;
+  min-height: 550px;
+}
+@media only screen and (mim-width: 600px) and (max-width: 900px) {
+  .section-separation-image {
+    min-height: 450px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .section-separation-image {
+    min-height: 350px;
+  }
 }
 
 /* Contact Us Form */
@@ -1022,10 +1037,6 @@ footer .copyright {
   .testimonial {
     width: 100%;
   }
-}
-
-.testimonial-banner-image {
-  height: -webkit-fill-available;
 }
 
 .feedback {
