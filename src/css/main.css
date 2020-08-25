@@ -112,6 +112,12 @@ nav {
   height: auto;
   display: flex;
   flex-direction: row;
+  position: absolute;
+  z-index: 99;
+  top: 10px;
+  left: 20px;
+  align-items: center;
+  width: 100%;
 }
 
 div.tdp-logo {
@@ -165,6 +171,7 @@ li.menu-items {
 
 a.menu-link {
   letter-spacing: 1px;
+  color: white;
 }
 
 /* Header */
