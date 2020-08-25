@@ -88,6 +88,9 @@ addEventListener("fetch", (event) => {
     return;
   }
 
+  if (request.cache === "only-if-cached" && request.mode !== "same-origin")
+    return;
+
   // For HTML requests, try the network first, fall back to the cache, finally the offline page
   if (request.headers.get("Accept").includes("text/html")) {
     event.respondWith(
@@ -97,27 +100,14 @@ addEventListener("fetch", (event) => {
           // Add other pages to pages cache
           // Fetch page from network
           const copy = fetchResponse.clone();
-
-          if (offlinePages.includes(url.pathname)) {
-            try {
-              event.waitUntil(
-                caches.open(staticCacheName).then((staticCache) => {
-                  staticCache.put(request, copy);
-                })
-              );
-            } catch (error) {
-              console.error(error);
-            }
-          } else {
-            try {
-              event.waitUntil(
-                caches.open(pagesCacheName).then((pagesCache) => {
-                  return pagesCache.put(request, copy);
-                })
-              );
-            } catch (error) {
-              console.error(error);
-            }
+          try {
+            event.waitUntil(
+              caches.open(pagesCacheName).then((pagesCache) => {
+                return pagesCache.put(request, copy);
+              })
+            );
+          } catch (error) {
+            console.error(error);
           }
           return fetchResponse;
         })
