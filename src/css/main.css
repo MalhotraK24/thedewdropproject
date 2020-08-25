@@ -108,16 +108,14 @@ a:hover {
 
 /* Navigation */
 nav {
-  min-height: 60px;
-  height: auto;
   display: flex;
   flex-direction: row;
   position: absolute;
   z-index: 99;
-  top: 10px;
-  left: 20px;
+  padding: 20px;
   align-items: center;
   width: 100%;
+  justify-content: space-evenly;
 }
 
 div.tdp-logo {
