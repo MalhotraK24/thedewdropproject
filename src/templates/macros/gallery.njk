@@ -1,5 +1,5 @@
 {% macro render(imagePath, itemNumber) -%}
     <a href="{{imagePath}}.jpg" class="gallery__item--{{itemNumber}}">
-        <img src="{{imagePath}}.jpg" srcset="{{imagePath}}-480.jpg 480w, {{imagePath}}-720.jpg 720w, {{imagePath}}-1080.jpg 1080w, {{imagePath}}-1440.jpg 1440w" sizes="50vw" alt="gallery__item--{{itemNumber}}">
+        <img src="{{imagePath}}-1440.jpg" srcset="{{imagePath}}-480.jpg 480w, {{imagePath}}-720.jpg 720w, {{imagePath}}-1080.jpg 1080w, {{imagePath}}-1440.jpg 1440w" sizes="50vw" alt="gallery__item--{{itemNumber}}">
     </a>
 {%- endmacro %}
