@@ -62,6 +62,10 @@ const paths = {
     src: `${root.src}`,
     dist: `${root.dist}`,
   },
+  fonts: {
+    src: `${root.src}assets/fonts/`,
+    dist: `${root.dist}assets/fonts/`,
+  },
 };
 
 // --------------------------------------------------------
