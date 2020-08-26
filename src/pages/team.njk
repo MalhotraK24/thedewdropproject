@@ -1,13 +1,14 @@
 {% extends "layout.njk" -%}
+{% set pageName = "team" %}
 
 {% block head -%}
     {% import '../templates/macros/head.njk' as head -%}
-    {{head.render('team')}}
+    {{head.render(pageName)}}
 {%- endblock %}
 
 {% block content -%}
     {% import '../templates/macros/navigation.njk' as nav -%}
-    {{ nav.active('team') }}
+    {{ nav.active(pageName) }}
     <div class="container">
         <div class="banner-image-2 banner-image"></div>
     </div>

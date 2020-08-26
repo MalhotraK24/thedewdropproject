@@ -1,20 +1,19 @@
-{% set image_defaultpath = "assets/images" %}
 {% extends "layout.njk" -%}
+{% set image_defaultpath = "assets/images" -%}
+{% set pageName = "home" -%}
+
+{% import '../templates/macros/head.njk' as head -%}
+{% import '../templates/macros/navigation.njk' as nav -%}
+{% import '../templates/macros/gallery.njk' as pictures -%}
+
 
 {% block head -%}
-    {% import '../templates/macros/head.njk' as head -%}
-    {{head.render('home')}}
+    {{head.render(pageName)}}
 {%- endblock %}
 
 {% block content -%}
-    {% import '../templates/macros/navigation.njk' as nav -%}
-    {{nav.active('home')}}
+    {{nav.active(pageName)}}
     <header>
-        {# <div class="header">
-            <div class="logo">
-                <img src="{{image_defaultpath}}/Icons/Watermark_TDP_Black.png" alt="watermark">
-            </div>
-        </div> #}
         <div class="container">
             <div class="header-content">
                 <h1 class="title">The Dewdrop Project</h1><hr>
@@ -40,66 +39,13 @@
     </div>
     <section class="loading-images"><img src="{{image_defaultpath}}/Icons/loading-images.gif"></section>
     <section class="grid visually-hidden">
-        <div class="gallery">
-            <a href="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-1.jpg" class="gallery__item--1">
-                <img src="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-1.jpg" alt="gallery-item-1">
-            </a>
-            <a href="{{image_defaultpath}}/Disha-Sanchit/Cocktail-1.jpg" class="gallery__item--2">
-                <img src="{{image_defaultpath}}/Disha-Sanchit/Cocktail-1.jpg" alt="gallery-item-2">
-            </a>
-            <a href="{{image_defaultpath}}/Pratishtha/Wedding-1.jpg" class="gallery__item--3">
-                <img src="{{image_defaultpath}}/Pratishtha/Wedding-1.jpg" alt="gallery-item-3">
-            </a>
-            <a href="{{image_defaultpath}}/Pratishtha/Wedding-2.jpg" class="gallery__item--4">
-                <img src="{{image_defaultpath}}/Pratishtha/Wedding-2.jpg" alt="gallery-item-4">
-            </a>
-            <a href="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-2.jpg" class="gallery__item--5">
-                <img src="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-2.jpg" alt="gallery-item-5">
-            </a>
-            <a href="{{image_defaultpath}}/Disha-Sanchit/Wedding-3.jpg" class="gallery__item--6">
-                <img src="{{image_defaultpath}}/Disha-Sanchit/Wedding-3.jpg" alt="gallery-item-6">
-            </a>
-        </div>
-        <div class="gallery">
-            <a href="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-3.jpg" class="gallery__item--1">
-                <img src="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-3.jpg" alt="gallery-item-1">
-            </a>
-            <a href="{{image_defaultpath}}/Banners/Banner2.jpg" class="gallery__item--2">
-                <img src="{{image_defaultpath}}/Banners/Banner2.jpg" alt="gallery-item-2">
-            </a>
-            <a href="{{image_defaultpath}}/InKa/Wedding-3.jpg" class="gallery__item--3">
-                <img src="{{image_defaultpath}}/InKa/Wedding-3.jpg" alt="gallery-item-3">
-            </a>
-            <a href="{{image_defaultpath}}/Pratishtha/Wedding-4.jpg" class="gallery__item--4">
-                <img src="{{image_defaultpath}}/Pratishtha/Wedding-4.jpg" alt="gallery-item-4">
-            </a>
-            <a href="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-5.jpg" class="gallery__item--5">
-                <img src="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-5.jpg" alt="gallery-item-5">
-            </a>
-            <a href="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-7.jpg" class="gallery__item--6">
-                <img src="{{image_defaultpath}}/Banners/Banner3.jpg" alt="gallery-item-6">
-            </a>
-        </div>
-        <div class="gallery">
-            <a href="{{image_defaultpath}}/InKa/Wedding-2.jpg" class="gallery__item--1">
-                <img src="{{image_defaultpath}}/InKa/Wedding-2.jpg" alt="gallery-item-1">
-            </a>
-            <a href="{{image_defaultpath}}/Sonalika/Mehendi-1.jpg" class="gallery__item--2">
-                <img src="{{image_defaultpath}}/Sonalika/Mehendi-1.jpg" alt="gallery-item-2">
-            </a>
-            <a href="{{image_defaultpath}}/Pratishtha/Wedding-3.jpg" class="gallery__item--3">
-                <img src="{{image_defaultpath}}/Pratishtha/Wedding-3.jpg" alt="gallery-item-3">
-            </a>
-            <a href="{{image_defaultpath}}/Sonalika/Wedding-1.jpg" class="gallery__item--4">
-                <img src="{{image_defaultpath}}/Sonalika/Wedding-1.jpg" alt="gallery-item-4">
-            </a>
-            <a href="{{image_defaultpath}}/Disha-Sanchit/Cocktail-2.jpg" class="gallery__item--5">
-                <img src="{{image_defaultpath}}/Disha-Sanchit/Cocktail-2.jpg" alt="gallery-item-5">
-            </a>
-            <a href="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-6.jpg" class="gallery__item--6">
-                <img src="{{image_defaultpath}}/Disha-Sanchit/Disha-Sanchit-6.jpg" alt="gallery-item-6">
-            </a>
-        </div>
+        {% for gallery in galleries %}
+            <div class="gallery">
+                {% for image in gallery.images %}
+                    {{ pictures.render(image.src,loop.index) }}
+                {% endfor %}
+            </div>
+        {% endfor %}
     </section>
     <div class="container">
         <div class="banner-image-3 section-separation-image"></div>

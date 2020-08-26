@@ -116,5 +116,73 @@
       "memberName": "Manish Sahdev",
       "memberTitle": "Lead Cinematographer"
     }
+  ],
+  "galleries": [
+    {
+      "images": [
+        {
+          "src": "assets/images/Disha-Sanchit/Disha-Sanchit-1"
+        },
+        {
+          "src": "assets/images/Disha-Sanchit/Cocktail-1"
+        },
+        {
+          "src": "assets/images/Pratishtha/Wedding-1"
+        },
+        {
+          "src": "assets/images/Pratishtha/Wedding-2"
+        },
+        {
+          "src": "assets/images/Disha-Sanchit/Disha-Sanchit-2"
+        },
+        {
+          "src": "assets/images/Disha-Sanchit/Wedding-3"
+        }
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "assets/images/Disha-Sanchit/Disha-Sanchit-3"
+        },
+        {
+          "src": "assets/images/Banners/Banner2"
+        },
+        {
+          "src": "assets/images/InKa/Wedding-3"
+        },
+        {
+          "src": "assets/images/Pratishtha/Wedding-4"
+        },
+        {
+          "src": "assets/images/Disha-Sanchit/Disha-Sanchit-5"
+        },
+        {
+          "src": "assets/images/Disha-Sanchit/Disha-Sanchit-7"
+        }
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "assets/images/InKa/Wedding-2"
+        },
+        {
+          "src": "assets/images/Sonalika/Mehendi-1"
+        },
+        {
+          "src": "assets/images/Pratishtha/Wedding-3"
+        },
+        {
+          "src": "assets/images/Sonalika/Wedding-1"
+        },
+        {
+          "src": "assets/images/Disha-Sanchit/Cocktail-2"
+        },
+        {
+          "src": "assets/images/Disha-Sanchit/Disha-Sanchit-6"
+        }
+      ]
+    }
   ]
 }
