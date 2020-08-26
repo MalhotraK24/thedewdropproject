@@ -7,8 +7,7 @@ const gulp = require("gulp"),
   del = require("del"),
   shell = require("gulp-shell"),
   data = require("gulp-data"),
-  nunjucksRender = require("gulp-nunjucks-render"),
-  fontmin = require("gulp-fontmin");
+  nunjucksRender = require("gulp-nunjucks-render");
 
 // Image...
 const imagemin = require("imagemin"),
@@ -119,31 +118,6 @@ function scriptsPlugins() {
     .pipe(gulp.dest(paths.scripts.plugins.dist));
 }
 
-function fontMin(text, cb) {
-  return gulp
-    .src([`${paths.fonts.src}**/*.ttf`])
-    .pipe(
-      fontmin({
-        text: text,
-      })
-    )
-    .pipe(gulp.dest(paths.fonts.dist))
-    .on("end", cb);
-}
-
-function font(cb) {
-  var buffers = [];
-  return gulp
-    .src("${paths.html.src}pages/**/index.+(html|njk)")
-    .on("data", function (file) {
-      buffers.push(file.contents);
-    })
-    .on("end", function () {
-      var text = Buffer.concat(buffers).toString("utf-8");
-      fontMin(text, cb);
-    });
-}
-
 function html() {
   // Gets .html and .nunjucks files in pages
   return (
@@ -184,6 +158,7 @@ function copyMisc() {
   return gulp
     .src(
       [
+        `${root.src}assets/fonts/*`,
         `${root.src}datasources/*.json`,
         `${root.src}assets/manifest.json`,
         `${root.src}/serviceworker*.js`, // All service worker files in the root directory
@@ -199,7 +174,6 @@ const publishSet = gulp.series(
   scriptsMin,
   html,
   htmlMin,
-  font,
 
   // Parallel tasks...
   gulp.parallel(stylesPlugins, scriptsPlugins, images, copyMisc)
