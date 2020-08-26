@@ -180,6 +180,25 @@ gulp.task("messageStart", shell.task("echo Site is building..."));
 gulp.task("messageEnd", shell.task("echo Site is finished building."));
 gulp.task("publish", gulp.series("messageStart", publishSet, "messageEnd")); // Full build ('optimised' - ie. ready for production)
 
+// Optimize images
+// const sharp = require("sharp");
+// const fs = require("fs");
+// const { options } = require("less");
+// const directory = "src/assets/images/Banners";
+
+// gulp.task("optimize-images", async () => {
+//   fs.readdirSync(directory).forEach((file) => {
+//     var tmp = file.replace(".jpg", "");
+//     const resize = (size) =>
+//       sharp(`${directory}/${file}`)
+//         .resize(size) // width, height
+//         .toFile(`${directory}/${tmp}-${size}.jpg`)
+//         .then(console.log("Compression successful!"))
+//         .catch((error) => console.log(error));
+//     Promise.all([1440, 1080, 720, 480].map(resize));
+//   });
+// });
+
 // Minify CSS
 // const cleanCSS = require("gulp-clean-css");
 
