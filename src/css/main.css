@@ -30,6 +30,17 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"),
+    url(https://example.com/MaterialIcons-Regular.woff) format("woff"),
+    url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
+}
+
 /* Body */
 body {
   font-family: "ostrich-sans", "gotu", "FS Joey Web Light",
@@ -54,8 +65,8 @@ h1 {
     font-size: 45px;
   }
 }
+
 h2 {
-  /* font-family: 'ostrich-sans'; */
   font-weight: lighter;
   font-size: 35px;
   margin: 25px;
@@ -67,8 +78,8 @@ h2 {
     font-size: 25px;
   }
 }
+
 h3 {
-  /* font-family: 'ostrich-sans'; */
   font-weight: lighter;
   font-size: 25px;
   margin: 20px;
@@ -104,6 +115,31 @@ a:hover {
 
 .hide {
   display: none;
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
 }
 
 /* Navigation */
@@ -186,6 +222,51 @@ li.menu-items {
 a.menu-link {
   letter-spacing: 1px;
   color: white;
+}
+
+.portfolio-icon::before {
+  font-family: "Material Icons";
+  content: "collections";
+  color: white;
+  padding-right: 10px;
+  position: relative;
+  top: 4px;
+}
+
+.testimonials-icon::before {
+  font-family: "Material Icons";
+  content: "rate_review";
+  color: white;
+  padding-right: 10px;
+  position: relative;
+  top: 4px;
+}
+
+.team-icon::before {
+  font-family: "Material Icons";
+  content: "people";
+  color: white;
+  padding-right: 10px;
+  position: relative;
+  top: 4px;
+}
+
+.contact-icon::before {
+  font-family: "Material Icons";
+  content: "contact_support";
+  color: white;
+  padding-right: 10px;
+  position: relative;
+  top: 4px;
+}
+
+.call-icon::before {
+  font-family: "Material Icons";
+  content: "phone";
+  color: black;
+  padding-right: 8px;
+  position: relative;
+  top: 3px;
 }
 
 /* Header */
@@ -761,6 +842,42 @@ section.grid {
 section.contact-us {
   display: flex;
   flex-direction: row;
+}
+
+.call-us-text {
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  align-self: center;
+  padding: 20px;
+  font-family: gotu;
+  font-size: 13px;
+  line-height: 2em;
+  width: 100%;
+}
+@media only screen and (min-width: 650px) and (max-width: 800px) {
+  .call-us-text {
+    font-size: 13px;
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 650px) {
+  .call-us-text {
+    font-size: 13px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .call-us-text {
+    font-size: 12px;
+    width: 100%;
+  }
+}
+
+.call-us-text a,
+.call-us-text span {
+  margin: 10px;
+  display: inline-block;
 }
 
 .contact-us-form {
