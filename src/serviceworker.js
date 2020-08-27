@@ -1,4 +1,4 @@
-var CACHE_NAME = "pages-cache-v2";
+var CACHE_NAME = "pages-cache-v1";
 var urlsToCache = ["/", "assets/css/main.css", "assets/js/main.js"];
 
 // Install the service worker with the predefined cache items
@@ -14,7 +14,7 @@ self.addEventListener("install", function (event) {
 
 // This method is used to activate a new service worker when the old one is terminated
 self.addEventListener("activate", function (event) {
-  var cacheWhitelist = ["pages-cache-v1"];
+  var cacheWhitelist = CACHE_NAME;
   event.waitUntil(
     caches.keys().then(function (cacheNames) {
       return Promise.all(
@@ -26,6 +26,12 @@ self.addEventListener("activate", function (event) {
       );
     })
   );
+});
+
+self.addEventListener("message", function (event) {
+  if (event.data.action === "skipWaiting") {
+    self.skipWaiting();
+  }
 });
 
 // Fetch the response for the request either from the cache or the network if it's a new request and clone the response
