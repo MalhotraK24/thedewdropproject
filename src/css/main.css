@@ -165,16 +165,22 @@ div.tdp-logo {
   background-color: black;
   display: flex;
   align-items: center;
-  margin: 10px;
+  margin: 12px;
   border: solid white 1px;
 }
-@media only screen and (min-width: 600px) and (max-width: 900px) {
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  div.tdp-logo {
+    width: 8%;
+    margin: 10px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 700px) {
   div.tdp-logo {
     width: 10%;
     margin: 10px;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   div.tdp-logo {
     width: 12%;
     margin: 8px;
@@ -213,7 +219,7 @@ li.menu-items {
 }
 @media only screen and (max-width: 400px) {
   li.menu-items {
-    font-size: 12px;
+    font-size: 14px;
     margin-right: 6px;
   }
 }
