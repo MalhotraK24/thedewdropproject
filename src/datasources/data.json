@@ -184,5 +184,75 @@
         }
       ]
     }
+  ],
+  "logos": [
+    {
+      "src": "assets/images/Icons/popxo-logo.jpeg",
+      "alt": "popxo logo"
+    },
+    {
+      "src": "assets/images/Icons/theweddingbrigade-logo.jpeg",
+      "alt": "theweddingbrigade logo"
+    },
+    {
+      "src": "assets/images/Icons/weddingsutra-logo.png",
+      "alt": "weddingsutra logo"
+    },
+    {
+      "src": "assets/images/Icons/bridalaffairindia-logo.png",
+      "alt": "bridalaffairindia logo"
+    },
+    {
+      "src": "assets/images/Icons/zowed-logo.png",
+      "alt": "zowed logo"
+    },
+    {
+      "src": "assets/images/Icons/wedabout-logo.png",
+      "alt": "wedabout logo"
+    },
+    {
+      "src": "assets/images/Icons/wedzo-logo.jpeg",
+      "alt": "wedzo logo"
+    },
+    {
+      "src": "assets/images/Icons/fabweddings-logo.jpeg",
+      "alt": "fabweddings logo"
+    },
+    {
+      "src": "assets/images/Icons/weddingzin-logo.jpeg",
+      "alt": "weddingzin logo"
+    },
+    {
+      "src": "assets/images/Icons/shaadiwish-logo.jpeg",
+      "alt": "shaadiwish logo"
+    },
+    {
+      "src": "assets/images/Icons/weddingplz-logo.jpeg",
+      "alt": "weddingplz logo"
+    },
+    {
+      "src": "assets/images/Icons/wittyvows-logo.jpeg",
+      "alt": "wittyvows logo"
+    },
+    {
+      "src": "assets/images/Icons/zankyou-logo.jpeg",
+      "alt": "zankyou logo"
+    },
+    {
+      "src": "assets/images/Icons/indiangramwedding-logo.jpeg",
+      "alt": "indiangramwedding logo"
+    },
+    {
+      "src": "assets/images/Icons/shaadisaga-logo.png",
+      "alt": "shaadisaga logo"
+    },
+    {
+      "src": "assets/images/Icons/ht-logo.jpeg",
+      "alt": "hindustantimes logo"
+    },
+    {
+      "src": "assets/images/Icons/nbt-logo.jpg",
+      "alt": "navbharattimes logo"
+    }
   ]
 }

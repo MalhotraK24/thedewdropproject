@@ -5,7 +5,7 @@
 {% import '../templates/macros/head.njk' as head -%}
 {% import '../templates/macros/navigation.njk' as nav -%}
 {% import '../templates/macros/gallery.njk' as pictures -%}
-
+{% import '../templates/macros/footer-logo.njk' as footerlogo -%}
 
 {% block head -%}
     {{head.render(pageName)}}
@@ -37,7 +37,9 @@
         <h1>Portfolio</h1>
         <hr/>
     </div>
-    <section class="loading-images"><img src="{{image_defaultpath}}/Icons/loading-images.gif" alt="loading-images-gif"></section>
+    <section class="loading-images">
+        <img src="{{image_defaultpath}}/Icons/loading-images.gif" alt="loading-images-gif">
+    </section>
     <section class="grid visually-hidden">
         {% for gallery in galleries %}
             <div class="gallery">
@@ -59,21 +61,9 @@
             <h2>We have been featured on</h2>
             <hr/>
             <div class="logos">
-                <img src="{{image_defaultpath}}/Icons/weddingsutra-logo.png" alt="weddingsutra-logo">
-                <img src="{{image_defaultpath}}/Icons/bridalaffairindia-logo.png" alt="bridalaffair-india-logo">
-                <img src="{{image_defaultpath}}/Icons/zowed-logo.png" alt="zowed-logo">
-                <img src="{{image_defaultpath}}/Icons/wedabout-logo.png" alt="wedabout-logo">
-                <img src="{{image_defaultpath}}/Icons/wedzo-logo.jpeg" alt="wedzo-logo">
-                <img src="{{image_defaultpath}}/Icons/fabweddings-logo.jpeg" alt="fabweddings-logo">
-                <img src="{{image_defaultpath}}/Icons/weddingzin-logo.jpeg" alt="weddingzin-logo">
-                <img src="{{image_defaultpath}}/Icons/shaadiwish-logo.jpeg" alt="shaadiwish-logo">
-                <img src="{{image_defaultpath}}/Icons/weddingplz-logo.jpeg" alt="wedding-plz-logo">
-                <img src="{{image_defaultpath}}/Icons/wittyvows-logo.jpeg" alt="wittyvows-logo">
-                <img src="{{image_defaultpath}}/Icons/zankyou-logo.jpeg" alt="zankyou-logo">
-                <img src="{{image_defaultpath}}/Icons/indiangramwedding-logo.jpeg" alt="indiangram-wedding-logo">
-                <img src="{{image_defaultpath}}/Icons/shaadisaga-logo.png" alt="shaadisaga-logo">
-                <img src="{{image_defaultpath}}/Icons/ht-logo.jpeg" alt="hindustan-times-logo">
-                <img src="{{image_defaultpath}}/Icons/nbt-logo.jpg" alt="nav-bharat-times-logo">
+            {% for logo in logos %}
+                    {{ footerlogo.render(logo.src,logo.alt) }}
+            {% endfor %}
             </div>
         </div>
     </section>
