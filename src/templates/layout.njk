@@ -25,12 +25,12 @@
 
         if ('serviceWorker' in navigator) {
 
-            navigator.serviceWorker.register('/serviceworker.js').then(function(reg) {
-                reg.addEventListener('updatefound', function() {
+            navigator.serviceWorker.register('/serviceworker.js').then(reg => {
+                reg.addEventListener('updatefound', () => {
                     // A wild service worker has appeared in reg.installing!
                     newWorker = reg.installing;
 
-                    newWorker.addEventListener('statechange', function() {
+                    newWorker.addEventListener('statechange', () => {
                         // Has network.state changed?
                         switch (newWorker.state) {
                             case 'installed':
