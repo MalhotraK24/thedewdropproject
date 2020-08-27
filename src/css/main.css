@@ -224,7 +224,7 @@ a.menu-link {
   color: white;
 }
 
-.portfolio-icon::before {
+/* .portfolio-icon::before {
   font-family: "Material Icons";
   content: "collections";
   color: white;
@@ -258,7 +258,7 @@ a.menu-link {
   padding-right: 10px;
   position: relative;
   top: 4px;
-}
+} */
 
 .call-icon::before {
   font-family: "Material Icons";
