@@ -249,16 +249,13 @@ gulp.task("publish", gulp.series("messageStart", publishSet, "messageEnd")); // 
 // const resizeImg = require("resize-img");
 // gulp.task("resize-images", async () => {
 //   const image = await resizeImg(
-//     fs.readFileSync("./src/assets/images/Icons/favicon_io/maskable_icon.png"),
+//     fs.readFileSync("./src/assets/images/Icons/popxo-logo.png"),
 //     {
-//       width: 196,
-//       height: 196,
+//       width: 225,
+//       height: 225,
 //     }
 //   );
-//   fs.writeFileSync(
-//     "./src/assets/images/Icons/favicon_io/maskable_icon.png",
-//     image
-//   );
+//   fs.writeFileSync("./src/assets/images/Icons/popxo-logo.png", image);
 // });
 
 // Old method to compress images
