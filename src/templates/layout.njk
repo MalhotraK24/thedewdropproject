@@ -37,6 +37,7 @@
                         switch (newWorker.state) {
                             case 'installed':
                             console.log("New Service Worker state is installed!");
+                            console.log(navigator.serviceWorker.controller);
                             if (navigator.serviceWorker.controller) {
                                 // new update available
                                 showUpdateBar();
