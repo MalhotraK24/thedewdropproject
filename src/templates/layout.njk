@@ -10,7 +10,7 @@
         {% include "./partials/_scroll-to-top.njk" %}
     </body>
     <!-- Registering a service worker -->
-    <script>
+    {# <script>
         let newWorker;
 
         function showUpdateBar() {
@@ -55,5 +55,49 @@
                 refreshing = true;
             });
         }
+        </script> #}
+        <script>
+            // make the whole serviceworker process into a promise so later on we can
+            // listen to it and in case new content is available a toast will be shown
+            window.isUpdateAvailable = new Promise(function(resolve, reject) {
+                // lazy way of disabling service workers while developing
+                if ('serviceWorker' in navigator) {
+                    // register service worker file
+                    navigator.serviceWorker.register('/serviceworker.js')
+                        .then(reg => {
+                            reg.onupdatefound = () => {
+                                const installingWorker = reg.installing;
+                                installingWorker.onstatechange = () => {
+                                    switch (installingWorker.state) {
+                                        case 'installed':
+                                            if (navigator.serviceWorker.controller) {
+                                                // new update available
+                                                resolve(true);
+                                            } else {
+                                                // no update available
+                                                resolve(false);
+                                            }
+                                            break;
+                                    }
+                                };
+                            };
+                        })
+                        .catch(err => console.error('[SW ERROR]', err));
+                }
+            });
+
+            // listen to the service worker promise in index.html to see if there has been a new update.
+            // condition: the service-worker.js needs to have some kind of change - e.g. increment CACHE_VERSION.
+            window['isUpdateAvailable']
+                .then(isAvailable => {
+                    if (isAvailable) {
+                        const toast = this.toastCtrl.create({
+                            message: 'New Update available! Reload the webapp to see the latest juicy changes.',
+                            position: 'bottom',
+                            showCloseButton: true,
+                        });
+                        toast.present();
+                    }
+                });
         </script>
 </html>
