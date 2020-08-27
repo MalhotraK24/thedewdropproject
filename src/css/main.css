@@ -1480,7 +1480,7 @@ p.member-title {
   z-index: 99;
   left: 50%;
   bottom: 30px;
-  font-family: gotu;
+  letter-spacing: 1px;
 }
 
 #snackbar.show {
@@ -1489,8 +1489,17 @@ p.member-title {
   animation: fadein 0.5s;
 }
 
-#snackbar a {
-  color: darkolivegreen;
+a#reload {
+  color: gold;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+a#reload::after {
+  font-family: "Material Icons";
+  content: "refresh";
+  top: 3px;
+  position: relative;
 }
 
 @-webkit-keyframes fadein {
