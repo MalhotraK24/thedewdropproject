@@ -18,7 +18,7 @@
         });
 
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
+            //window.addEventListener('load', function() {
                 // Register the service worker
                 navigator.serviceWorker.register('/service-worker.js').then(reg => {
                     reg.addEventListener('updatefound', () => {
@@ -43,18 +43,18 @@
                     // registration failed :(
                     console.log('ServiceWorker registration failed: ', err);
                 });
-            });
+            //});
         }
 
         let refreshing;
         // The event listener that is fired when the service worker updates
         // Here we reload the page
-        if ('serviceWorker' in navigator) {
+        //if ('serviceWorker' in navigator) {
             navigator.serviceWorker.addEventListener('controllerchange', function () {
                 if (refreshing) return;
                 window.location.reload();
                 refreshing = true;
             });
-        }
+        //}
     </script>
 </html>
