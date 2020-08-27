@@ -28,12 +28,6 @@ self.addEventListener("activate", function (event) {
   );
 });
 
-self.addEventListener("message", function (event) {
-  if (event.data.action === "skipWaiting") {
-    self.skipWaiting();
-  }
-});
-
 // Fetch the response for the request either from the cache or the network if it's a new request and clone the response
 self.addEventListener("fetch", function (event) {
   event.respondWith(
