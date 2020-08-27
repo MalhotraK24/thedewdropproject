@@ -92,7 +92,8 @@
                 .then(isAvailable => {
                     if (isAvailable) {
                         // new update available
-                        showUpdateBar();
+                        let snackbar = document.getElementById('snackbar');
+                        snackbar.className = 'show';
                     }
                 });
         </script>
