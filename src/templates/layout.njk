@@ -2,12 +2,6 @@
 <html lang="en">
     <head>
         {% block head %} {% endblock %}
-    </head>
-    <body>
-        <div id="snackbar">A new version of this app is available. Click <a id="reload">here</a> to update.</div>
-        {% block content %} {% endblock %}
-        {% include "./partials/_footer.njk" %}
-        {% include "./partials/_scroll-to-top.njk" %}
         <script>
             // make the whole serviceworker process into a promise so later on we can
             // listen to it and in case new content is available a toast will be shown
@@ -37,17 +31,29 @@
                         .catch(err => console.error('[SW ERROR]', err));
                 }
             });
-
+        </script>
+    </head>
+    <body>
+        <div id="snackbar">A new version of this app is available. Click <a id="reload">here</a> to update.</div>
+        {% block content %} {% endblock %}
+        {% include "./partials/_footer.njk" %}
+        {% include "./partials/_scroll-to-top.njk" %}
+        <script>
             // listen to the service worker promise in index.html to see if there has been a new update.
             // condition: the service-worker.js needs to have some kind of change - e.g. increment CACHE_VERSION.
             window['isUpdateAvailable']
-                .then(isAvailable => {
-                    if (isAvailable) {
-                        // new update available
-                        let snackbar = document.getElementById('snackbar');
-                        snackbar.className = 'show';
-                    }
-                });
+            .then(isAvailable => {
+                if (isAvailable) {
+                    // new update available
+                    let snackbar = document.getElementById('snackbar');
+                    snackbar.className = 'show';
+                }
+            });
+
+            // The click event on the pop up notification
+            document.getElementById('reload').addEventListener('click', function(){
+                window.location.reload();
+            });
         </script>
     </body>
 </html>
