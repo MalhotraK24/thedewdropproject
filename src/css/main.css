@@ -1489,6 +1489,10 @@ p.member-title {
   animation: fadein 0.5s;
 }
 
+#snackbar a {
+  color: darkolivegreen;
+}
+
 @-webkit-keyframes fadein {
   from {
     bottom: 0;
