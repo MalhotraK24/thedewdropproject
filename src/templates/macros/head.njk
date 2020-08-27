@@ -38,14 +38,14 @@
     <script src="{{js_defaultpath}}/main.js" type="text/javascript" async></script>
     <!-- Registering a service worker -->
     <script>
-        if ('serviceWorker' in navigator) {
+        /* if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
                 // Unregister the existing service worker - Workaround to fix the cache issue.
-                /* navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                navigator.serviceWorker.getRegistrations().then(function(registrations) {
                     for(let registration of registrations) {
                         registration.unregister();
                     }
-                }); */
+                });
 
                 // Register the service worker
                 navigator.serviceWorker.register('/serviceworker.js').then(function(registration) {
@@ -56,6 +56,6 @@
                 console.log('ServiceWorker registration failed: ', err);
                 });
             });
-        }
+        } */
     </script>
 {%- endmacro %}
