@@ -260,29 +260,169 @@ header {
 .banner-image-1 {
   background-image: url(../../assets/images/Banners/Banner1.jpg);
 }
+@media only screen and (min-width: 1081px) and (max-width: 1440px) {
+  .banner-image-1 {
+    background-image: url(../../assets/images/Banners/Banner1-1440.jpg);
+  }
+}
+@media only screen and (min-width: 721px) and (max-width: 1080px) {
+  .banner-image-1 {
+    background-image: url(../../assets/images/Banners/Banner1-1080.jpg);
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 720px) {
+  .banner-image-1 {
+    background-image: url(../../assets/images/Banners/Banner1-720.jpg);
+  }
+}
+@media only screen and (max-width: 480px) {
+  .banner-image-1 {
+    background-image: url(../../assets/images/Banners/Banner1-480.jpg);
+  }
+}
 
 .banner-image-2 {
   background-image: url(../../assets/images/Banners/Banner2.jpg);
+}
+@media only screen and (min-width: 1081px) and (max-width: 1440px) {
+  .banner-image-2 {
+    background-image: url(../../assets/images/Banners/Banner2-1440.jpg);
+  }
+}
+@media only screen and (min-width: 721px) and (max-width: 1080px) {
+  .banner-image-2 {
+    background-image: url(../../assets/images/Banners/Banner2-1080.jpg);
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 720px) {
+  .banner-image-2 {
+    background-image: url(../../assets/images/Banners/Banner2-720.jpg);
+  }
+}
+@media only screen and (max-width: 480px) {
+  .banner-image-2 {
+    background-image: url(../../assets/images/Banners/Banner2-480.jpg);
+  }
 }
 
 .banner-image-3 {
   background-image: url(../../assets/images/Disha-Sanchit/Wedding-1.jpg);
 }
+@media only screen and (min-width: 1081px) and (max-width: 1440px) {
+  .banner-image-3 {
+    background-image: url(../../assets/images/Disha-Sanchit/Wedding-1-1440.jpg);
+  }
+}
+@media only screen and (min-width: 721px) and (max-width: 1080px) {
+  .banner-image-3 {
+    background-image: url(../../assets/images/Disha-Sanchit/Wedding-1-1080.jpg);
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 720px) {
+  .banner-image-3 {
+    background-image: url(../../assets/images/Disha-Sanchit/Wedding-1-720.jpg);
+  }
+}
+@media only screen and (max-width: 480px) {
+  .banner-image-3 {
+    background-image: url(../../assets/images/Disha-Sanchit/Wedding-1-480.jpg);
+  }
+}
 
 .banner-image-4 {
   background-image: url(../../assets/images/Banners/Banner5.jpg);
+}
+@media only screen and (min-width: 1081px) and (max-width: 1440px) {
+  .banner-image-4 {
+    background-image: url(../../assets/images/Banners/Banner5-1440.jpg);
+  }
+}
+@media only screen and (min-width: 721px) and (max-width: 1080px) {
+  .banner-image-4 {
+    background-image: url(../../assets/images/Banners/Banner5-1080.jpg);
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 720px) {
+  .banner-image-4 {
+    background-image: url(../../assets/images/Banners/Banner5-720.jpg);
+  }
+}
+@media only screen and (max-width: 480px) {
+  .banner-image-4 {
+    background-image: url(../../assets/images/Banners/Banner5-480.jpg);
+  }
 }
 
 .banner-image-jasmine {
   background-image: url(../../assets/images/Banners/jasmine-getting-ready.jpg);
 }
+@media only screen and (min-width: 1081px) and (max-width: 1440px) {
+  .banner-image-jasmine {
+    background-image: url(../../assets/images/Banners/jasmine-getting-ready-1440.jpg);
+  }
+}
+@media only screen and (min-width: 721px) and (max-width: 1080px) {
+  .banner-image-jasmine {
+    background-image: url(../../assets/images/Banners/jasmine-getting-ready-1080.jpg);
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 720px) {
+  .banner-image-jasmine {
+    background-image: url(../../assets/images/Banners/jasmine-getting-ready-720.jpg);
+  }
+}
+@media only screen and (max-width: 480px) {
+  .banner-image-jasmine {
+    background-image: url(../../assets/images/Banners/jasmine-getting-ready-480.jpg);
+  }
+}
 
 .banner-image-ridhima {
   background-image: url(../../assets/images/Banners/ridhima-getting-ready.jpg);
 }
+@media only screen and (min-width: 1081px) and (max-width: 1440px) {
+  .banner-image-ridhima {
+    background-image: url(../../assets/images/Banners/ridhima-getting-ready-1440.jpg);
+  }
+}
+@media only screen and (min-width: 721px) and (max-width: 1080px) {
+  .banner-image-ridhima {
+    background-image: url(../../assets/images/Banners/ridhima-getting-ready-1080.jpg);
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 720px) {
+  .banner-image-ridhima {
+    background-image: url(../../assets/images/Banners/ridhima-getting-ready-720.jpg);
+  }
+}
+@media only screen and (max-width: 480px) {
+  .banner-image-ridhima {
+    background-image: url(../../assets/images/Banners/ridhima-getting-ready-480.jpg);
+  }
+}
 
 .banner-image-rohan {
   background-image: url(../../assets/images/Banners/rohan-cocktail.jpg);
+}
+@media only screen and (min-width: 1081px) and (max-width: 1440px) {
+  .banner-image-rohan {
+    background-image: url(../../assets/images/Banners/rohan-cocktail-1440.jpg);
+  }
+}
+@media only screen and (min-width: 721px) and (max-width: 1080px) {
+  .banner-image-rohan {
+    background-image: url(../../assets/images/Banners/rohan-cocktail-1080.jpg);
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 720px) {
+  .banner-image-rohan {
+    background-image: url(../../assets/images/Banners/rohan-cocktail-720.jpg);
+  }
+}
+@media only screen and (max-width: 480px) {
+  .banner-image-rohan {
+    background-image: url(../../assets/images/Banners/rohan-cocktail-480.jpg);
+  }
 }
 
 hr {
