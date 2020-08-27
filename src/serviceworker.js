@@ -14,7 +14,7 @@ self.addEventListener("install", function (event) {
 
 // This method is used to activate a new service worker when the old one is terminated
 self.addEventListener("activate", function (event) {
-  var cacheWhitelist = CACHE_NAME;
+  var cacheWhitelist = ["pages-cache-v2"];
   event.waitUntil(
     caches.keys().then(function (cacheNames) {
       return Promise.all(
