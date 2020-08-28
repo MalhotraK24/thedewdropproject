@@ -36,18 +36,18 @@
         </script>
     </head>
     <body>
-        <div id="snackbar">A new version of this app is available. <a id="reload">Refresh</a></div>
+        <div id="snackbar">A new version of this app is available.<a id="reload">Refresh</a><a id="close"></a></div>
         {% block content %} {% endblock %}
         {% include "./partials/_footer.njk" %}
         {% include "./partials/_scroll-to-top.njk" %}
         <script>
+            let snackbar = document.getElementById('snackbar');
             // listen to the service worker promise in index.html to see if there has been a new update.
             // condition: the service-worker.js needs to have some kind of change - e.g. increment CACHE_VERSION.
             window['isUpdateAvailable']
             .then(isAvailable => {
                 if (isAvailable) {
                     // new update available
-                    let snackbar = document.getElementById('snackbar');
                     snackbar.className = 'show';
                 }
             });
@@ -55,6 +55,11 @@
             // The click event on the pop up notification
             document.getElementById('reload').addEventListener('click', function(){
                 window.location.reload();
+            });
+
+            // The click event on the pop up notification
+            document.getElementById('close').addEventListener('click', function(){
+                snackbar.className = 'hide';
             });
         </script>
     </body>
