@@ -1497,7 +1497,7 @@ a#reload {
 
 a#reload::after {
   font-family: "Material Icons";
-  content: "refresh";
+  content: "sync";
   top: 3px;
   left: 2px;
   position: relative;
