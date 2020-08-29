@@ -1,4 +1,4 @@
-var CACHE_NAME = "pages-cache-v4";
+var CACHE_NAME = "pages-cache-v5";
 var urlsToCache = ["/", "assets/css/main.css", "assets/js/main.js"];
 
 // Install the service worker with the predefined cache items
