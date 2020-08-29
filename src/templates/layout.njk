@@ -7,7 +7,7 @@
             // listen to it and in case new content is available a notification will be shown
             window.isUpdateAvailable = new Promise(function(resolve, reject) {
                 // lazy way of disabling service workers while developing
-                if ('serviceWorker' in navigator) {
+                if ('serviceWorker' in navigator && ['localhost', '127'].indexOf(location.hostname) === -1) {
                     // register service worker file
                     navigator.serviceWorker.register('/serviceworker.js')
                     .then(reg => {
@@ -42,6 +42,10 @@
         {% include "./partials/_scroll-to-top.njk" %}
         <script>
             let snackbar = document.getElementById('snackbar');
+            let mobileNav = document.getElementById('mobile-nav');
+            let menuIcon = document.getElementById('menu-icon');
+            let closeIcon = document.getElementById('close-icon');
+
             // listen to the service worker promise in index.html to see if there has been a new update.
             // condition: the service-worker.js needs to have some kind of change - e.g. increment CACHE_VERSION.
             window['isUpdateAvailable']
@@ -59,7 +63,19 @@
 
             // The click event on the pop up notification
             document.getElementById('close').addEventListener('click', function(){
-                snackbar.className = 'hide';
+                snackbar.classList.add("visually-hidden");
+            });
+
+            // The click event on the mobile navigation menu
+            menuIcon.addEventListener('click', function(){
+                mobileNav.classList.remove("visually-hidden");
+                menuIcon.classList.add("visually-hidden");
+            });
+
+            // The click event on the mobile navigation menu
+            closeIcon.addEventListener('click', function(){
+                mobileNav.classList.add("visually-hidden");
+                menuIcon.classList.remove("visually-hidden");
             });
         </script>
     </body>
