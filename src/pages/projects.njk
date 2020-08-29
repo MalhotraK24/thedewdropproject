@@ -1,0 +1,22 @@
+{% extends "layout.njk" -%}
+{% set pageName = "projects" %}
+
+{% block head -%}
+    {% import '../templates/macros/head.njk' as head -%}
+    {{head.render(pageName)}}
+{%- endblock %}
+
+{% block content -%}
+    {% import '../templates/macros/navigation.njk' as nav -%}
+    {{nav.active(pageName)}}
+    <div class="container">
+        <div class="banner-image-5 banner-image"></div>
+    </div>
+    <div class="story">
+        <img src="assets/images/Projects/Priyanshi-Prabal/Photo1.png" alt="story-thumbnail">
+        <div class="client">
+            <h2 class="client-name">Priyanshi x Prabal</h2>
+            <h3 class="client-date">January 2020</h3>
+        </div>
+    </div>
+{%- endblock %}

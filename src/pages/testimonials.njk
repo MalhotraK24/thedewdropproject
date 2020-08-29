@@ -18,23 +18,6 @@
         <p class="about-us">We always love to hear what our lovely clients have to say about our work, services offered and products delivered as we belive in learning and growing with every wedding we cover.</p>
         <p class="about-us">We always build a personal relationship with ouy clients to make them feel comfortable to making them part of The Dewdrop family while becoming a part of their family. The excitement and happiness over seeing their own wedding pictures drives The Dewdrop team to continue capturing beutiful moments and creating happy memories for our clients.</p>
     </div>
-    {# <div class="slideshow-container" class="visually-hidden">
-        {% for feedback in feedbacks -%}
-        <div class="mySlides moveLeft">
-            <div class="testimonial-header">
-                <div class="testimonial">
-                    <img src="{{ feedback.src }}" alt="testimonial-banner-image">
-                </div>
-                <div class="feedback">
-                    <h2 class="client-name">{{ feedback.clientName }}</h2>
-                    <h3 class="client-date">{{ feedback.clientDate }}</h3>
-                    <hr/>
-                    <p>{{ feedback.text }}</p>
-                </div>
-            </div>
-        </div>
-        {%- endfor %}
-    </div> #}
     {% for feedback in feedbacks -%}
         {% if (loop.index%2 == 1) %}
         <div class="testimonial-header">
