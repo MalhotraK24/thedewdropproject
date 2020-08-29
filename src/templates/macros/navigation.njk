@@ -10,10 +10,8 @@
     <nav class="navigation">
         <ul class="menu">
             <li class="menu-items"><a href="./index.html#portfolio" class="menu-link portfolio-icon">Portfolio</a></li>
-            {% if activePage == 'home' %}
-                <li class="menu-items {% if activePage == 'testimonials' %} active {% endif %}"><a href="./testimonials.html" class="menu-link testimonials-icon">Testimonials</a></li>
-                <li class="menu-items {% if activePage == 'team' %} active {% endif %}"><a href="./team.html" class="menu-link team-icon">Our Team</a></li>
-            {% endif %}
+            <li class="menu-items {% if activePage == 'testimonials' %} active {% endif %}"><a href="./testimonials.html" class="menu-link testimonials-icon">Testimonials</a></li>
+            <li class="menu-items {% if activePage == 'team' %} active {% endif %}"><a href="./team.html" class="menu-link team-icon">Our Team</a></li>
             <li class="menu-items"><a href="./index.html#contact-us" class="menu-link contact-icon">Contact Us</a></li>
         </ul>
     </nav>
