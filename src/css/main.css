@@ -142,6 +142,11 @@ a:hover {
   font-feature-settings: "liga";
 }
 
+.content-body {
+  max-width: 1200px;
+  margin: auto;
+}
+
 /* NAVIGATION (START) */
 
 section.before-header {
@@ -306,6 +311,7 @@ a.menu-link {
   padding-right: 8px;
   position: relative;
   top: 3px;
+  font-size: 16px;
 }
 
 /* NAVIGATION (END) */
@@ -335,8 +341,9 @@ a.menu-link {
   flex-direction: column;
   color: black;
   align-items: flex-end;
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: 14px;
+  font-weight: 600;
 }
 
 .menu-icon {
@@ -410,14 +417,19 @@ header {
 
 /* Banner Image */
 .banner-image {
-  min-height: 550px !important;
+  min-height: 500px !important;
 }
-@media only screen and (mim-width: 600px) and (max-width: 900px) {
+@media only screen and (min-width: 700px) and (max-width: 900px) {
   .banner-image {
     min-height: 450px !important;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+  .banner-image {
+    min-height: 400px !important;
+  }
+}
+@media only screen and (max-width: 500px) {
   .banner-image {
     min-height: 350px !important;
   }
@@ -427,6 +439,7 @@ header {
 .banner-image-2,
 .banner-image-3,
 .banner-image-4,
+.banner-image-5,
 .banner-image-jasmine,
 .banner-image-ridhima,
 .banner-image-rohan {
@@ -437,7 +450,7 @@ header {
 }
 
 .banner-image-1 {
-  background-image: url(../../assets/images/Banners/Banner1.jpg);
+  background-image: url(../../assets/images/Banners/Banner1-1920.jpg);
 }
 @media only screen and (min-width: 1081px) and (max-width: 1440px) {
   .banner-image-1 {
@@ -449,14 +462,9 @@ header {
     background-image: url(../../assets/images/Banners/Banner1-1080.jpg);
   }
 }
-/* @media only screen and (max-width: 720px) {
-  .banner-image-1 {
-    background-image: url(../../assets/images/Banners/Banner1-720.jpg);
-  }
-} */
 
 .banner-image-2 {
-  background-image: url(../../assets/images/Banners/Banner2.jpg);
+  background-image: url(../../assets/images/Banners/Banner2-1920.jpg);
 }
 @media only screen and (min-width: 1081px) and (max-width: 1440px) {
   .banner-image-2 {
@@ -468,14 +476,9 @@ header {
     background-image: url(../../assets/images/Banners/Banner2-1080.jpg);
   }
 }
-/* @media only screen and (max-width: 720px) {
-  .banner-image-2 {
-    background-image: url(../../assets/images/Banners/Banner2-720.jpg);
-  }
-} */
 
 .banner-image-3 {
-  background-image: url(../../assets/images/Disha-Sanchit/Wedding-1.jpg);
+  background-image: url(../../assets/images/Disha-Sanchit/Wedding-1-1920.jpg);
 }
 @media only screen and (min-width: 1081px) and (max-width: 1440px) {
   .banner-image-3 {
@@ -487,33 +490,37 @@ header {
     background-image: url(../../assets/images/Disha-Sanchit/Wedding-1-1080.jpg);
   }
 }
-/* @media only screen and (max-width: 720px) {
-  .banner-image-3 {
-    background-image: url(../../assets/images/Disha-Sanchit/Wedding-1-720.jpg);
-  }
-} */
 
 .banner-image-4 {
-  background-image: url(../../assets/images/Banners/Banner5.jpg);
+  background-image: url(../../assets/images/Banners/Banner4-1920.jpg);
 }
 @media only screen and (min-width: 1081px) and (max-width: 1440px) {
   .banner-image-4 {
-    background-image: url(../../assets/images/Banners/Banner5-1440.jpg);
+    background-image: url(../../assets/images/Banners/Banner4-1440.jpg);
   }
 }
 @media only screen and (max-width: 1080px) {
   .banner-image-4 {
+    background-image: url(../../assets/images/Banners/Banner4-1080.jpg);
+  }
+}
+
+.banner-image-5 {
+  background-image: url(../../assets/images/Banners/Banner5-1920.jpg);
+}
+@media only screen and (min-width: 1081px) and (max-width: 1440px) {
+  .banner-image-5 {
+    background-image: url(../../assets/images/Banners/Banner5-1440.jpg);
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .banner-image-5 {
     background-image: url(../../assets/images/Banners/Banner5-1080.jpg);
   }
 }
-/* @media only screen and (max-width: 720px) {
-  .banner-image-4 {
-    background-image: url(../../assets/images/Banners/Banner5-720.jpg);
-  }
-} */
 
 .banner-image-jasmine {
-  background-image: url(../../assets/images/Banners/jasmine-getting-ready.jpg);
+  background-image: url(../../assets/images/Banners/jasmine-getting-ready-1920.jpg);
 }
 @media only screen and (min-width: 1081px) and (max-width: 1440px) {
   .banner-image-jasmine {
@@ -525,14 +532,9 @@ header {
     background-image: url(../../assets/images/Banners/jasmine-getting-ready-1080.jpg);
   }
 }
-/* @media only screen and (max-width: 720px) {
-  .banner-image-jasmine {
-    background-image: url(../../assets/images/Banners/jasmine-getting-ready-720.jpg);
-  }
-} */
 
 .banner-image-ridhima {
-  background-image: url(../../assets/images/Banners/ridhima-getting-ready.jpg);
+  background-image: url(../../assets/images/Banners/ridhima-getting-ready-1920.jpg);
 }
 @media only screen and (min-width: 1081px) and (max-width: 1440px) {
   .banner-image-ridhima {
@@ -544,14 +546,9 @@ header {
     background-image: url(../../assets/images/Banners/ridhima-getting-ready-1080.jpg);
   }
 }
-/* @media only screen and (max-width: 720px) {
-  .banner-image-ridhima {
-    background-image: url(../../assets/images/Banners/ridhima-getting-ready-720.jpg);
-  }
-} */
 
 .banner-image-rohan {
-  background-image: url(../../assets/images/Banners/rohan-cocktail.jpg);
+  background-image: url(../../assets/images/Banners/rohan-cocktail-1920.jpg);
 }
 @media only screen and (min-width: 1081px) and (max-width: 1440px) {
   .banner-image-rohan {
@@ -563,11 +560,6 @@ header {
     background-image: url(../../assets/images/Banners/rohan-cocktail-1080.jpg);
   }
 }
-/* @media only screen and (max-width: 720px) {
-  .banner-image-rohan {
-    background-image: url(../../assets/images/Banners/rohan-cocktail-720.jpg);
-  }
-} */
 
 hr {
   width: 80px;
@@ -1529,6 +1521,71 @@ p.member-title {
 
 /* TEAM or ABOUT US CLASS (END) */
 
+/* PROJECTS CLASS (START) */
+
+.story {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(../images/dainty-leaves.jpg);
+}
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+  .story img {
+    padding: 40px 20px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+  .story img {
+    padding: 30px 20px;
+  }
+}
+
+.story img {
+  width: 25%;
+  margin: 30px 0px;
+}
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  .story img {
+    width: 35%;
+    margin: 20px 0px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+  .story img {
+    width: 40%;
+    margin: 20px 0px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .story img {
+    width: 50%;
+    margin: 20px 0px;
+  }
+}
+
+.client {
+  display: flex;
+  background-color: white;
+  padding: 30px 50px 20px 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid black 2px;
+}
+@media only screen and (min-width: 500px) and (max-width: 1100px) {
+  .client {
+    padding: 20px 40px 10px 40px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .client {
+    padding: 20px 30px 10px 30px;
+  }
+}
+
+/* PROJECTS CLASS CLASS (END) */
+
 /* SERVICE WORKER NOTIFICATION CLASS (START) */
 
 #snackbar {
@@ -1601,4 +1658,4 @@ a#close::after {
   }
 }
 
-/* SERVICE WORKER NOTIFICATION CLASS (START) */
+/* SERVICE WORKER NOTIFICATION CLASS (END) */

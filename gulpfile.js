@@ -185,23 +185,24 @@ gulp.task("messageEnd", shell.task("echo Site is finished building."));
 gulp.task("publish", gulp.series("messageStart", publishSet, "messageEnd")); // Full build ('optimised' - ie. ready for production)
 
 // Optimize images
-// const sharp = require("sharp");
-// const fs = require("fs");
-// const { options } = require("less");
-// const directory = "src/assets/images/Banners";
+const sharp = require("sharp");
+const fs = require("fs");
+const { options } = require("less");
+const src = "src/assets/images/Banner-source";
+const dist = "src/assets/images/Banners";
 
-// gulp.task("optimize-images", async () => {
-//   fs.readdirSync(directory).forEach((file) => {
-//     var tmp = file.replace(".jpg", "");
-//     const resize = (size) =>
-//       sharp(`${directory}/${file}`)
-//         .resize(size) // width, height
-//         .toFile(`${directory}/${tmp}-${size}.jpg`)
-//         .then(console.log("Compression successful!"))
-//         .catch((error) => console.log(error));
-//     Promise.all([1440, 1080, 720, 480].map(resize));
-//   });
-// });
+gulp.task("optimize-images", async () => {
+  fs.readdirSync(src).forEach((file) => {
+    var tmp = file.replace(".jpg", "");
+    const resize = (size) =>
+      sharp(`${src}/${file}`)
+        .resize(size) // width, height
+        .toFile(`${dist}/${tmp}-${size}.jpg`)
+        .then(console.log("Compression successful!"))
+        .catch((error) => console.log(error));
+    Promise.all([1920, 1440, 1080].map(resize));
+  });
+});
 
 // Minify CSS
 // const cleanCSS = require("gulp-clean-css");
@@ -214,8 +215,8 @@ gulp.task("publish", gulp.series("messageStart", publishSet, "messageEnd")); // 
 // });
 
 // Compress PNGImages
-// const PNGImages = "src/assets/images/Icons/*.png";
-// const output = "src/assets/images/Icons";
+// const PNGImages = "src/assets/images/Projects/Priyanshi-Prabal/*.png";
+// const output = "src/assets/images/Projects/Priyanshi-Prabal";
 
 // gulp.task("compress-png-images", async () => {
 //   await imagemin([PNGImages], {
