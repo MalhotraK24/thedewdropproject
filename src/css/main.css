@@ -199,9 +199,14 @@ div.logo-container {
     width: 13%;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 300px) and (max-width: 500px) {
   div.logo-container {
     width: 18%;
+  }
+}
+@media only screen and (max-width: 300px) {
+  div.logo-container {
+    width: 22%;
   }
 }
 
