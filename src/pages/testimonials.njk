@@ -9,30 +9,33 @@
 {% block content -%}
     {% import '../templates/macros/navigation.njk' as nav -%}
     {{nav.active(pageName)}}
-    <div class="container">
-        <div class="banner-image-4 banner-image"></div>
-    </div>
-    <div class="about-us-content">
-        <h1 class="title">Client Testimonials</h1>
-        <hr/>
-        <p class="about-us">We always love to hear what our lovely clients have to say about our work, services offered and products delivered as we belive in learning and growing with every wedding we cover.</p>
-        <p class="about-us">We always build a personal relationship with ouy clients to make them feel comfortable to making them part of The Dewdrop family while becoming a part of their family. The excitement and happiness over seeing their own wedding pictures drives The Dewdrop team to continue capturing beutiful moments and creating happy memories for our clients.</p>
-    </div>
-    {% for feedback in feedbacks -%}
-        {% if (loop.index%2 == 1) %}
-        <div class="testimonial-header">
-        {% else %}
-        <div class="testimonial-header reverse-direction">
-        {% endif %}
-                <div class="testimonial">
-                    <img src="{{ feedback.src }}" alt="testimonial-banner-image">
-                </div>
-            <div class="feedback">
-                <h2 class="client-name">{{ feedback.clientName }}</h2>
-                <h3 class="client-date">{{ feedback.clientDate }}</h3>
-                <hr/>
-                <p>{{ feedback.text }}</p>
-            </div>
+    <div class="testimonial-content">
+        <div class="container">
+            <div class="banner-image-4 banner-image"></div>
         </div>
-    {%- endfor %}
+        <div class="about-us-content">
+            <h1 class="title">Client Testimonials</h1>
+            <hr/>
+            <p class="about-us">We always love to hear what our lovely clients have to say about our work, services offered and products delivered as we belive in learning and growing with every wedding we cover.</p>
+            <p class="about-us">We always build a personal relationship with ouy clients to make them feel comfortable to making them part of The Dewdrop family while becoming a part of their family. The excitement and happiness over seeing their own wedding pictures drives The Dewdrop team to continue capturing beutiful moments and creating happy memories for our clients.</p>
+        </div>
+        {% for feedback in feedbacks -%}
+            {% if (loop.index%2 == 1) %}
+            <div class="testimonial-header">
+            {% else %}
+            <div class="testimonial-header reverse-direction">
+            {% endif %}
+                <div class="testimonial">
+                    <img src="{{ feedback.src }}" alt="image client info">
+                    <div class="text-over-image">
+                        <h2 class="client-name">{{ feedback.clientName }}</h2>
+                        <h3 class="client-date">{{ feedback.clientDate }}</h3>
+                    </div>
+                </div>
+                <div class="feedback">
+                    <p>{{ feedback.text }}</p>
+                </div>
+            </div>
+        {%- endfor %}
+    </div>
 {%- endblock %}
