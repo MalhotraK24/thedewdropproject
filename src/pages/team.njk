@@ -20,17 +20,19 @@
         <p class="about-us">
         TDP has shot over a hundred weddings across a variety of Indian traditions and customs. &nbsp; "Apart from the grandeur and the colour, what we love about indian weddings is the fact that every tradition stems from its own set of beliefs, which presents us with a huge creative learning curve."</p>
     </div>
-    <div class="team">
-        <h1 class="title">Our Team</h1>
-        <hr>
-        <div class="pictures">
-        {% for member in members -%}
-            <div class="member">
-                <img src={{ member.src }} alt="testimonial-banner-image">
-                <p class="member-name">{{ member.memberName }}</p>
-                <p class="member-title">{{ member.memberTitle }}</p>
+    <div class="testimonial-content">
+        <div class="team">
+            <h1 class="title">Our Team</h1>
+            <hr>
+            <div class="pictures">
+            {% for member in members -%}
+                <div class="member">
+                    <img src={{ member.src }} alt="testimonial-banner-image">
+                    <p class="member-name">{{ member.memberName }}</p>
+                    <p class="member-title">{{ member.memberTitle }}</p>
+                </div>
+            {%- endfor %}
             </div>
-        {%- endfor %}
         </div>
     </div>
 {%- endblock %}

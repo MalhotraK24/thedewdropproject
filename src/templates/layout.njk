@@ -34,7 +34,7 @@
                 }
             });
 
-            if(localStorage.counter && localStorage.counter < 4) {
+            if(localStorage.counter && localStorage.counter <= 4) {
                 localStorage.counter = Number (localStorage.counter) + 1;
             }
             if(!localStorage.counter){
@@ -56,10 +56,6 @@
             let mobileNav = document.getElementById('mobile-nav');
             let menuIcon = document.getElementById('menu-icon');
             let closeIcon = document.getElementById('close-icon');
-
-            let deferredPrompt;
-            let addHome = document.getElementById('add-to-home');
-            let addBtn = document.getElementById('add-btn');
 
             // listen to the service worker promise in index.html to see if there has been a new update.
             // condition: the service-worker.js needs to have some kind of change - e.g. increment CACHE_VERSION.
@@ -99,7 +95,11 @@
                 menuIcon.classList.remove("visually-hidden");
             });
 
-            if(localStorage.counter < 4) {
+            let deferredPrompt;
+            let addHome = document.getElementById('add-to-home');
+            let addBtn = document.getElementById('add-btn');
+
+            if(localStorage.counter <= 4) {
                 // Prompt to give users the option to add the PWA to their hoem screens
                 window.addEventListener('beforeinstallprompt', (e) => {
                     // Prevent Chrome 67 and earlier from automatically showing the prompt
@@ -112,7 +112,7 @@
                         addHome.classList.remove("visually-hidden");
                         setTimeout(function() {
                             addHome.classList.add("visually-hidden");
-                        } ,5000);
+                        } ,8000);
 
                         addBtn.addEventListener('click', (e) => {
                             // hide our user interface that shows our A2HS button
@@ -123,9 +123,11 @@
                             // Wait for the user to respond to the prompt
                             deferredPrompt.userChoice.then((choiceResult) => {
                                 if (choiceResult.outcome === 'accepted') {
-                                console.log('User accepted the A2HS prompt');
+                                    console.log("User " + choiceResult.outcome + " to install the app.");
+                                    addHome.classList.add("visually-hidden");
                                 } else {
-                                console.log('User dismissed the A2HS prompt');
+                                    console.log("User " + choiceResult.outcome + " to install the app.");
+                                    addHome.classList.add("visually-hidden");
                                 }
                                 deferredPrompt = null;
                             });
