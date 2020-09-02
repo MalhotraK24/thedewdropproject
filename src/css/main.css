@@ -579,6 +579,7 @@ header {
 .banner-image-3,
 .banner-image-4,
 .banner-image-5,
+.banner-image-6,
 .banner-image-jasmine,
 .banner-image-ridhima,
 .banner-image-rohan {
@@ -655,6 +656,20 @@ header {
 @media only screen and (max-width: 1080px) {
   .banner-image-5 {
     background-image: url(../../assets/images/Banners/Banner5-1080.jpg);
+  }
+}
+
+.banner-image-6 {
+  background-image: url(../../assets/images/Banners/Banner6-1920.jpg);
+}
+@media only screen and (min-width: 1081px) and (max-width: 1440px) {
+  .banner-image-6 {
+    background-image: url(../../assets/images/Banners/Banner6-1440.jpg);
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .banner-image-6 {
+    background-image: url(../../assets/images/Banners/Banner6-1080.jpg);
   }
 }
 
@@ -1463,163 +1478,115 @@ footer .copyright {
 
 /* TESTIMONIAL COMPONENT CLASS (START) */
 
-.testimonial-header {
+.testimonial-content {
+  background-color: #f5f5f5;
   display: flex;
   flex-direction: row;
-  background-color: white;
+  flex-flow: wrap;
+  padding: 60px 0px;
+}
+
+.testimonial-header {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 60px 30px 25px 30px;
+  position: relative;
+  width: 45%;
   margin: 60px auto;
+  background-color: darkslategray;
+  justify-content: flex-start;
 }
 @media only screen and (max-width: 700px) {
   .testimonial-header {
-    flex-direction: column;
+    width: 85%;
   }
 }
 
-.testimonial .header-content {
-  background-color: white;
-  opacity: 0.9;
-  color: black;
-  padding: 10px;
-}
-
-.testimonial img {
-  width: 85%;
-  height: 135px;
-}
-
-.text-over-image {
-  text-align: center;
+.testimonial-header img {
+  width: 110px;
+  height: 110px;
   position: absolute;
+  z-index: 1;
+  top: -20%;
+  margin: 20px auto;
   display: flex;
-  flex-direction: column;
-}
-
-.client-name {
-  margin: 0px;
-  font-size: 40px;
-  letter-spacing: 0px;
-  font-family: "italianno";
   align-self: center;
 }
-@media only screen and (max-width: 400px) {
-  .client-name {
-    font-size: 30px;
+@media only screen and (min-width: 900px) and (max-width: 1100px) {
+  .testimonial-header img {
+    top: -18%;
   }
 }
-
-.client-date {
-  font-size: 20px;
-  letter-spacing: 0px;
-  margin: 0px;
-  font-family: "marck-script";
-  align-self: center;
-}
-@media only screen and (max-width: 400px) {
-  .client-date {
-    font-size: 18px;
-  }
-}
-
-.testimonial-content {
-  background-color: whitesmoke;
-}
-
-.testimonial {
-  width: 45%;
-  display: flex;
-  align-items: center;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  /* margin: auto; */
-  border-right: solid #000 1px;
-  border-right-style: dotted;
-  padding: 15px;
-  background-color: black;
-  min-height: 300px;
-}
-@media only screen and (min-width: 700px) and (max-width: 800px) {
-  .testimonial {
-    width: 40%;
-    border-right: solid black 1px;
-    border-right-style: dotted;
-    padding: 8px;
+@media only screen and (min-width: 700px) and (max-width: 900px) {
+  .testimonial-header img {
+    top: -16%;
   }
 }
 @media only screen and (max-width: 700px) {
-  .testimonial {
-    width: 100%;
-    border-bottom: solid black 1px;
-    border-right: none;
-    border-bottom-style: dotted;
-    padding: 30px;
+  .testimonial-header img {
+    top: -20%;
   }
 }
 
 .feedback {
-  width: 50%;
+  width: 100%;
   text-align: justify;
   justify-content: center;
   display: flex;
   flex-direction: column;
-  padding: 35px;
   font-family: gotu;
-  line-height: 26px;
-  font-size: 14px;
-  background-color: white;
-  position: relative;
-  margin: auto;
-  min-height: 350px;
+  color: #fff;
 }
-@media only screen and (min-width: 700px) and (max-width: 800px) {
-  .feedback {
-    width: 55%;
-    padding: 20px 30px;
-    font-size: 13px;
-    min-height: 300px;
+
+.client-name {
+  margin: 5px 0px;
+  font-size: 55px;
+  letter-spacing: 0;
+  font-family: "italianno";
+  align-self: center;
+}
+@media only screen and (max-width: 800px) {
+  .client-name {
+    font-size: 45px;
   }
 }
-@media only screen and (min-width: 400px) and (max-width: 700px) {
-  .feedback {
-    width: 90%;
-    padding: 20px 30px;
-    font-size: 12px;
-    min-height: 200px;
-  }
+
+.client-date {
+  font-size: 30px;
+  letter-spacing: 0;
+  margin: 5px 0px;
+  font-family: "marck-script";
+  align-self: center;
 }
-@media only screen and (max-width: 400px) {
-  .feedback {
-    width: 90%;
-    padding: 15px 25px;
-    line-height: 22px;
-    font-size: 12px;
-    min-height: 200px;
+@media only screen and (max-width: 800px) {
+  .client-date {
+    font-size: 27px;
   }
 }
 
 .feedback p {
-  width: 85%;
-  margin: auto;
+  width: 100%;
+  font-size: 13px;
+  margin: 20px auto;
+  line-height: 23px;
 }
-
-.reverse-direction {
-  flex-direction: row-reverse;
-}
-@media only screen and (max-width: 700px) {
-  .reverse-direction {
-    flex-direction: column;
+@media only screen and (min-width: 700px) and (max-width: 800px) {
+  .feedback p {
+    font-size: 12px;
+    line-height: 23px;
   }
 }
-
-.reverse-direction .testimonial {
-  border-left: solid black 1px;
-  border-left-style: dotted;
-  border-right: none;
+@media only screen and (min-width: 400px) and (max-width: 700px) {
+  .feedback p {
+    font-size: 12px;
+    line-height: 22px;
+  }
 }
-@media only screen and (max-width: 700px) {
-  .reverse-direction .testimonial {
-    border-left: none;
+@media only screen and (max-width: 400px) {
+  .feedback p {
+    font-size: 12px;
+    line-height: 22px;
   }
 }
 
@@ -1628,7 +1595,7 @@ footer .copyright {
 /* TEAM or ABOUT US CLASS (START) */
 
 .about-us-content {
-  background-color: whitesmoke;
+  background-color: white;
   display: flex;
   flex-direction: column;
   color: black;
@@ -1649,10 +1616,10 @@ p.about-us {
 
 .team {
   padding: 50px 0px;
-  background-color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
+  margin: 0px auto;
 }
 
 .pictures {
