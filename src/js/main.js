@@ -29,7 +29,7 @@ $(window).on("load", function () {
   }
 
   function allImagesLoaded() {
-    console.log("ALL IMAGES LOADED");
+    console.log("Portfolio Images have been Loaded.");
     $(".loading-images").addClass("visually-hidden");
     $("section.grid").removeClass("visually-hidden");
     $(".gallery a").simpleLightbox();

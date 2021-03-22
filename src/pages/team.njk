@@ -27,7 +27,7 @@
             <div class="pictures">
             {% for member in members -%}
                 <div class="member">
-                    <img src={{ member.src }} alt="testimonial-banner-image">
+                    <img loading="lazy" src={{ member.src }} alt="testimonial-banner-image">
                     <p class="member-name">{{ member.memberName }}</p>
                     <p class="member-title">{{ member.memberTitle }}</p>
                 </div>
