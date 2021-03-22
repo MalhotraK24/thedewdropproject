@@ -2,142 +2,16 @@
 <html lang="en">
     <head>
         {% block head %} {% endblock %}
-        <script>
-            // make the whole serviceworker process into a promise so later on we can
-            // listen to it and in case new content is available a notification will be shown
-            window.isUpdateAvailable = new Promise(function(resolve, reject) {
-                // lazy way of disabling service workers while developing
-                if ('serviceWorker' in navigator && ['localhost', '127'].indexOf(location.hostname) === -1) {
-                    // register service worker file
-                    navigator.serviceWorker.register('/serviceworker.js')
-                    .then(reg => {
-                        // Registration was successful
-                        console.log('ServiceWorker registration successful with scope: ', reg.scope);
-                        reg.onupdatefound = () => {
-                            const installingWorker = reg.installing;
-                            installingWorker.onstatechange = () => {
-                                switch (installingWorker.state) {
-                                    case 'installed':
-                                        if (navigator.serviceWorker.controller) {
-                                            // new update available
-                                            resolve(true);
-                                        } else {
-                                            // no update available
-                                            resolve(false);
-                                        }
-                                        break;
-                                }
-                            };
-                        };
-                    })
-                    .catch(err => console.error('[SW ERROR]', err));
-                }
-            });
-
-            if(localStorage.counter && localStorage.counter <= 4) {
-                localStorage.counter = Number (localStorage.counter) + 1;
-            }
-            if(!localStorage.counter){
-                localStorage.counter = 1;
-            }
-        </script>
     </head>
     <body>
-        <div id="snackbar" class="visually-hidden">A new version of this app is available.<a id="reload">Update</a><a id="close"></a></div>
         {% block content %} {% endblock %}
         {% include "./partials/_footer.njk" %}
         {% include "./partials/_scroll-to-top.njk" %}
+        <div id="snackbar" class="visually-hidden">A new version of this app is available.<a id="reload">Update</a><a id="close"></a></div>
         <div id="add-to-home" class="visually-hidden">
             <span>Add the App to Home Screen</span>
             <i id="add-btn" class="material-icons">get_app</i>
         </div>
-        <script>
-            let snackbar = document.getElementById('snackbar');
-            let mobileNav = document.getElementById('mobile-nav');
-            let menuIcon = document.getElementById('menu-icon');
-            let closeIcon = document.getElementById('close-icon');
-
-            // listen to the service worker promise in index.html to see if there has been a new update.
-            // condition: the service-worker.js needs to have some kind of change - e.g. increment CACHE_VERSION.
-            window['isUpdateAvailable']
-            .then(isAvailable => {
-                if (isAvailable) {
-                    // new update available
-                    if(addHome.classList.contains("visually-hidden")) {
-                        snackbar.classList.remove("visually-hidden");
-                    }
-                    else{
-                        addHome.classList.add("visually-hidden");
-                        snackbar.classList.remove("visually-hidden");
-                    }
-                }
-            });
-
-            // The click event on the pop up notification
-            document.getElementById('reload').addEventListener('click', function(){
-                window.location.reload();
-            });
-
-            // The click event on the pop up notification
-            document.getElementById('close').addEventListener('click', function(){
-                snackbar.classList.add("visually-hidden");
-            });
-
-            // The click event on the mobile navigation menu
-            menuIcon.addEventListener('click', function(){
-                mobileNav.classList.remove("visually-hidden");
-                menuIcon.classList.add("visually-hidden");
-            });
-
-            // The click event on the mobile navigation menu
-            closeIcon.addEventListener('click', function(){
-                mobileNav.classList.add("visually-hidden");
-                menuIcon.classList.remove("visually-hidden");
-            });
-
-            let deferredPrompt;
-            let addHome = document.getElementById('add-to-home');
-            let addBtn = document.getElementById('add-btn');
-
-            if(localStorage.counter <= 4) {
-                // Prompt to give users the option to add the PWA to their hoem screens
-                window.addEventListener('beforeinstallprompt', (e) => {
-                    // Prevent Chrome 67 and earlier from automatically showing the prompt
-                    e.preventDefault();
-                    // Stash the event so it can be triggered later.
-                    deferredPrompt = e;
-
-                    if(localStorage.getItem('popState') != 'shown') {
-                        // Update UI to notify the user they can add to home screen
-                        addHome.classList.remove("visually-hidden");
-                        setTimeout(function() {
-                            addHome.classList.add("visually-hidden");
-                        } ,8000);
-
-                        addBtn.addEventListener('click', (e) => {
-                            // hide our user interface that shows our A2HS button
-                            addHome.classList.add("visually-hidden");
-                            //localStorage.setItem('popState','shown')
-                            // Show the prompt
-                            deferredPrompt.prompt();
-                            // Wait for the user to respond to the prompt
-                            deferredPrompt.userChoice.then((choiceResult) => {
-                                if (choiceResult.outcome === 'accepted') {
-                                    console.log("User " + choiceResult.outcome + " to install the app.");
-                                    addHome.classList.add("visually-hidden");
-                                } else {
-                                    console.log("User " + choiceResult.outcome + " to install the app.");
-                                    addHome.classList.add("visually-hidden");
-                                }
-                                deferredPrompt = null;
-                            });
-                        });
-                    }
-                });
-            }
-            else {
-                localStorage.setItem('popState','shown');
-            }
-        </script>
+        {# <script src="{{js_defaultpath}}/lib/notifications.js" type="text/javascript" async></script> #}
     </body>
 </html>
