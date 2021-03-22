@@ -188,7 +188,7 @@ gulp.task("publish", gulp.series("messageStart", publishSet, "messageEnd")); // 
 // const sharp = require("sharp");
 // const fs = require("fs");
 // const { options } = require("less");
-// const src = "src/assets/images/Testimonials";
+// const src = "src/assets/images/pre-optimised/testimonials";
 // const dist = "src/assets/images/Testimonials";
 
 // gulp.task("optimize-images", async () => {
@@ -200,7 +200,7 @@ gulp.task("publish", gulp.series("messageStart", publishSet, "messageEnd")); // 
 //         .toFile(`${dist}/${tmp}-${size}.jpg`)
 //         .then(console.log("Compression successful!"))
 //         .catch((error) => console.log(error));
-//     Promise.all([1080, 720].map(resize));
+//     Promise.all([1080].map(resize));
 //   });
 // });
 

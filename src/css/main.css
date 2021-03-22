@@ -1479,28 +1479,25 @@ footer .copyright {
 /* TESTIMONIAL COMPONENT CLASS (START) */
 
 .testimonial-content {
-  background-color: #f5f5f5;
+  background-color: #f3f3f1;
   display: flex;
   flex-direction: row;
   flex-flow: wrap;
-  padding: 60px 0px;
+  padding: 30px 0px;
 }
 
 .testimonial-header {
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  padding: 60px 30px 25px 30px;
+  padding: 15px 30px;
   position: relative;
-  width: 45%;
-  margin: 60px auto;
-  background-color: darkslategray;
-  /* justify-content: flex-start; */
-  max-height: 430px;
+  width: 30%;
+  margin: 30px auto;
 }
-@media only screen and (min-width: 600px) and (max-width: 700px) {
+@media only screen and (min-width: 600px) and (max-width: 900px) {
   .testimonial-header {
-    width: 75%;
+    width: 45%;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -1512,9 +1509,8 @@ footer .copyright {
 .testimonial-header img {
   width: 120px;
   height: 120px;
-  position: absolute;
+  position: relative;
   z-index: 1;
-  top: -22%;
   margin: 20px auto;
   display: flex;
   align-self: center;
@@ -1534,7 +1530,7 @@ footer .copyright {
   display: flex;
   flex-direction: column;
   font-family: gotu;
-  color: #fff;
+  color: #2b2b2b;
   overflow: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -1545,36 +1541,30 @@ footer .copyright {
 }
 
 .client-name {
-  margin: 5px 0px;
-  font-size: 55px;
+  margin: 5px 0;
+  font-size: 32px;
   letter-spacing: 0;
   font-family: "italianno";
   align-self: center;
-}
-@media only screen and (max-width: 800px) {
-  .client-name {
-    font-size: 45px;
-  }
+  position: absolute;
+  bottom: 40px;
 }
 
 .client-date {
-  font-size: 30px;
+  font-size: 12px;
   letter-spacing: 0;
-  margin: 5px 0px;
-  font-family: "marck-script";
+  margin: 5px 0;
   align-self: center;
-}
-@media only screen and (max-width: 800px) {
-  .client-date {
-    font-size: 27px;
-  }
+  position: absolute;
+  bottom: 20px;
 }
 
 .feedback p {
   width: 100%;
   font-size: 13px;
-  margin: 20px auto;
+  margin: 20px auto 100px auto;
   line-height: 23px;
+  position: relative;
 }
 @media only screen and (min-width: 700px) and (max-width: 800px) {
   .feedback p {
