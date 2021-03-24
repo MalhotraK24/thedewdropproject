@@ -200,7 +200,7 @@ gulp.task("publish", gulp.series("messageStart", publishSet, "messageEnd")); // 
 //         .toFile(`${dist}/${tmp}-${size}.jpg`)
 //         .then(console.log("Compression successful!"))
 //         .catch((error) => console.log(error));
-//     Promise.all([1920].map(resize));
+//     Promise.all([1280,1600,1920].map(resize));
 //   });
 // });
 
