@@ -228,8 +228,8 @@ gulp.task("publish", gulp.series("messageStart", publishSet, "messageEnd")); // 
 // });
 
 //Compress JPGImages
-// const JPEGImages = "src/assets/images/Icons/*.{jpg,jpeg}";
-// const output = "src/assets/images/Icons";
+// const JPEGImages = "src/assets/images/Bark/*.{jpg,jpeg}";
+// const output = "src/assets/images/Bark";
 
 // gulp.task("compress-jpg-images", async () => {
 //   await imagemin([JPEGImages], {
