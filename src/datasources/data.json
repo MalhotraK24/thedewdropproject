@@ -127,60 +127,104 @@
           "src": "assets/images/Disha-Sanchit/Cocktail-1"
         },
         {
+          "src": "assets/images/Bark/Bark-5"
+        },
+        {
+          "src": "assets/images/Bark/Bark-4"
+        },
+        {
+          "src": "assets/images/Disha-Sanchit/Wedding-3"
+        },
+        {
+          "src": "assets/images/Disha-Sanchit/Disha-Sanchit-3"
+        }
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "assets/images/Bark/Bark-21"
+        },
+        {
+          "src": "assets/images/Bark/Bark-38"
+        },
+        {
+          "src": "assets/images/Bark/Bark-42"
+        },
+        {
+          "src": "assets/images/Bark/Bark-36"
+        },
+        {
+          "src": "assets/images/Bark/Bark-37"
+        },
+        {
+          "src": "assets/images/Bark/Bark-35"
+        }
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "assets/images/Bark/Bark-2"
+        },
+        {
+          "src": "assets/images/Bark/Bark-10"
+        },
+        {
+          "src": "assets/images/Disha-Sanchit/Disha-Sanchit-5"
+        },
+        {
+          "src": "assets/images/Bark/Bark-9"
+        },
+        {
+          "src": "assets/images/Bark/Bark-7"
+        },
+        {
+          "src": "assets/images/Bark/Bark-8"
+        }
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "assets/images/Bark/Bark-26"
+        },
+        {
+          "src": "assets/images/Bark/Bark-27"
+        },
+        {
+          "src": "assets/images/Bark/Bark-24"
+        },
+        {
+          "src": "assets/images/Bark/Bark-28"
+        },
+        {
+          "src": "assets/images/Bark/Bark-30"
+        },
+        {
+          "src": "assets/images/Bark/Bark-25"
+        }
+      ]
+    },
+    {
+      "images": [
+        {
+          "src": "assets/images/Bark/Bark-13"
+        },
+        {
+          "src": "assets/images/Bark/Bark-14"
+        },
+        {
           "src": "assets/images/Pratishtha/Wedding-1"
         },
         {
           "src": "assets/images/Pratishtha/Wedding-2"
         },
         {
-          "src": "assets/images/Disha-Sanchit/Disha-Sanchit-2"
+          "src": "assets/images/Bark/Bark-15"
         },
         {
-          "src": "assets/images/Disha-Sanchit/Wedding-3"
-        }
-      ]
-    },
-    {
-      "images": [
-        {
-          "src": "assets/images/Disha-Sanchit/Disha-Sanchit-3"
-        },
-        {
-          "src": "assets/images/Banners/Banner2-1920"
-        },
-        {
-          "src": "assets/images/InKa/Wedding-3"
-        },
-        {
-          "src": "assets/images/Pratishtha/Wedding-4"
-        },
-        {
-          "src": "assets/images/Disha-Sanchit/Disha-Sanchit-5"
-        },
-        {
-          "src": "assets/images/Disha-Sanchit/Disha-Sanchit-7"
-        }
-      ]
-    },
-    {
-      "images": [
-        {
-          "src": "assets/images/InKa/Wedding-2"
-        },
-        {
-          "src": "assets/images/Sonalika/Mehendi-1"
-        },
-        {
-          "src": "assets/images/Pratishtha/Wedding-3"
-        },
-        {
-          "src": "assets/images/Sonalika/Wedding-1"
-        },
-        {
-          "src": "assets/images/Disha-Sanchit/Cocktail-2"
-        },
-        {
-          "src": "assets/images/Disha-Sanchit/Disha-Sanchit-6"
+          "src": "assets/images/Bark/Bark-18"
         }
       ]
     }
